@@ -1,5 +1,5 @@
 
-header {
+.header {
     // background-color: red;
     height: 60px;
     display: flex;
@@ -7,12 +7,13 @@ header {
     // border-bottom: solid grey 2px;
     box-shadow: 0 0 5px  #808080;
     position: relative;
-    img {
+    
+    &__img {
         // border: blue solid;
         width: 200px;
     }
 
-    a {
+    &__home-link {
         position: absolute;
         left: 0;
         height: 100%;
@@ -21,14 +22,15 @@ header {
         padding-right: 30px;
         // border: blue solid;
         display: flex;
+        
+        .fa-arrow-left {
+            margin-bottom: 0;
+            // border: solid red;
+            margin: auto;
+            font-size: 17px;
+            font-weight: 900;
+        }
     }
 
-    .fa-arrow-left {
-        margin-bottom: 0;
-        // border: solid red;
-        margin: auto;
-        font-size: 17px;
-        font-weight: 900;
-    }
 }
 

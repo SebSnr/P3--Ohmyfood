@@ -1,4 +1,4 @@
-footer {
+.footer {
     background-color: #2e2d2d;
     height: 15rem;
     display: flex;
@@ -8,38 +8,38 @@ footer {
     // border: solid gold;
 
     
-    h2, i, a {
+    &__title, i, a {
         color: white;
     }
 
-    h2 {
+    &__title, &__navigation {
         margin-left: $mobile-tablet-padding + $text-content-margin;  //a changer par une mixin ? 
         margin-right: $mobile-tablet-padding;
-        font-family:  'Shrikhand', cursive;
+    }
+
+    &__title {
+        font-family: 'Shrikhand', cursive;
         font-size: 1.2rem;
         font-weight: 200;
         margin-bottom: 1.3rem;
         // border: solid gold;
     }
 
-    ul {
-        margin-left: $mobile-tablet-padding + $text-content-margin;
-        margin-right: $mobile-tablet-padding;
+    &__navigation {
         // border: solid red;
+        &__list {
+            line-height: 2.2rem;
+            .fas {
+                width: 2rem
+                // font-size: 2em;
+            }
+            
+            .fa-hands-helping {
+                font-size: 0.7rem;
+            }
+        }
     }
 
-    li {
-        line-height: 2.2rem;
-    }
-
-    .fas {
-        width: 2rem
-        // font-size: 2em;
-    }
-    
-    .fa-hands-helping {
-        font-size: 0.7rem;
-    }
 
 
 }

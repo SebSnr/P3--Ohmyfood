@@ -1,3 +1,23 @@
-@mixin mobile-padding {
-    padding: $mobile-tablet-padding;
+/****************** paddings ******************/
+
+
+
+/****************** media queries ******************/
+
+@mixin mobile {
+    @media screen and (max-width: $screen-phone-max) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media screen and (max-width: $screen-tablette-) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media screen and (max-width: $screen-desktop-min) {
+        @content;
+    }
 }
