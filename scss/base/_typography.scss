@@ -1,0 +1,25 @@
+/****************** general elements ******************/
+
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap');
+
+h1, h2, h3, h4, p, a {
+    font-family: 'Roboto', sans-serif;
+    color: $font-color ;
+    font-size: $font-size;
+    // line-height: 2em;
+}
+
+a {
+    color: initial;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+li {
+    list-style-type: none;
+}
+
+
+/****************** footer ******************/
+
