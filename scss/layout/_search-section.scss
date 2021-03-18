@@ -1,0 +1,35 @@
+/****************** search section ******************/
+
+.location-banner {
+    background-color: #ececec;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 
+        inset 0px 8px 8px -10px #808080;
+
+    &__city {
+        margin-left: 1rem;
+        font-weight: 500;
+    }
+}
+
+.search-box {
+    background-color: $light-color-background;
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+    text-align: center;
+
+    &__title {
+        font-size: 1.5rem;
+        font-weight: 900;
+    }
+
+    &__title, &__title ~ *{
+        margin: 0 $screen-padding;
+    }
+}
+
+
+// border: solid saddlebrown;

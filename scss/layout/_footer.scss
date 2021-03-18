@@ -1,3 +1,5 @@
+/****************** footer style ******************/
+
 .footer {
     background-color: #2e2d2d;
     height: 15rem;
@@ -12,9 +14,10 @@
         color: white;
     }
 
-    &__title, &__navigation {
-        margin-left: $mobile-tablet-padding + $text-content-margin;  //a changer par une mixin ? 
-        margin-right: $mobile-tablet-padding;
+    &__title, 
+    &__navigation {
+        margin-left: $screen-padding + $text-content-margin;  //a changer par une mixin ? 
+        margin-right: $screen-padding;
     }
 
     &__title {
