@@ -48,19 +48,9 @@
             align-self: center;
             // border: purple solid;
             h3 {
-                padding-bottom: 0.3rem;
+                padding-bottom: $padding-bottom-item-title;
             }
         }
-
-        &__heart-logo {
-            // border: solid green;
-            justify-self: end;
-            align-self: center;
-            font-size: 2rem;
-            color: $main-color-logo;
-
-        }
-    
     }
 
     
