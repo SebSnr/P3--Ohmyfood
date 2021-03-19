@@ -1,42 +1,33 @@
 /****************** Explications-section ******************/
 
 .explications-section {
-    padding: 2.5rem $screen-padding;
+    @include max-width-mobile-container;
+    @include screen-padding;
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
     height: 30rem;
-    max-width: 500px;
-    border: solid green;
-    margin: 0 auto;;
+    // border: solid green;
 
     &__title {
-        font-size: 1.3rem;
-        font-weight: 900;
-        margin-bottom: 1.7rem;
+        margin-bottom: $margin-bottom-title;
     }
 
     &__list {
         display: flex;
         flex-direction: column;
-        // flex-wrap: wrap;
         justify-content: space-between;
         align-content: center;
         height: 20rem;
-        // padding-left: 3*$screen-padding;
-        // padding-right: 2*$screen-padding;
         padding-left: $screen-padding;
     }
 }
 
 .explications-items {
-    // flex-basis: 100%;
-    width: 100%;
-    // min-width: 300px;
-    // max-width: 400px;
-    position: relative;
     background-color: $light-color-background;
-    //border-radius: 20px;                       a supp par mixin
-    //box-shadow: 0 2px 6px  #dfdfdf;            a supp par mixin
-    @include border-radius-shadow;
+    position: relative;
+    width: 100%;
     height: 5rem;
+    @include border-radius-shadow;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -63,18 +54,19 @@
         // margin-right: 3rem;
         text-align: center;
         font-size: 1.1rem;
-        color: #757575;
+        color: $main-color-logo;
         // border: red solid;
     }
     
     &__text {
         flex: 0 1 70%;
-        font-weight: 900;
+        font-size: $subtitle-font-size;
+        font-weight: $heavy-bold;
         // border: solid saddlebrown;
     }
     
     .fa-mobile-alt {
-        font-size: 1.5rem;
+        font-size: 1.4rem;
         // border: solid;
     }
 }

@@ -1,9 +1,23 @@
 
 @mixin border-radius-shadow {
     box-shadow: 0 2px 6px  #dfdfdf;
-    border-radius: 20px;
-    
+    border-radius: $main-border-radius-card;
 }
+
+@mixin max-width-mobile-container {
+    max-width: 500px;
+    margin: 0 auto;
+}
+@mixin screen-margin {
+    margin-left: $screen-padding;
+    margin-right: $screen-padding;
+}
+
+@mixin screen-padding {
+    padding-left: $screen-padding;
+    padding-right: $screen-padding;
+}
+
 
 
 

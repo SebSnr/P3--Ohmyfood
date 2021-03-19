@@ -2,11 +2,15 @@
 
 .footer {
     background-color: #2e2d2d;
-    height: 15rem;
+}
+
+.footer-container {    
+    @include max-width-mobile-container;
     display: flex;
     flex-direction: column;
     justify-content: center;
     justify-self: center;
+    height: 15rem;
     // border: solid gold;
 
     
@@ -16,8 +20,11 @@
 
     &__title, 
     &__navigation {
+        @include screen-padding;
+        @media screen and (max-width:535px) {
         margin-left: $screen-padding + $text-content-margin;  //a changer par une mixin ? 
-        margin-right: $screen-padding;
+            
+        }
     }
 
     &__title {

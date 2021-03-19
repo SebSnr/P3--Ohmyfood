@@ -11,7 +11,7 @@
 
     &__city {
         margin-left: 1rem;
-        font-weight: 500;
+        font-weight: $light-bold;
     }
 }
 
@@ -21,13 +21,9 @@
     padding-bottom: 2.5rem;
     text-align: center;
 
-    &__title {
-        font-size: 1.5rem;
-        font-weight: 900;
-    }
 
     &__title, &__title ~ *{
-        margin: 0 $screen-padding;
+        @include screen-margin;
     }
 }
 

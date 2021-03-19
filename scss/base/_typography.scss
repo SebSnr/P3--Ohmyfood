@@ -4,14 +4,21 @@
 
 h1, h2, h3, h4, p, a, button {
     font-family: 'Roboto', sans-serif;
-    color: $font-color ;
     font-size: $font-size;
-    // line-height: 2em;
+    color: $font-color ;
 }
 
-h2 {
-    font-size: 1.3rem;
-    // font-weight: bold;
+
+h1, h2, h3 {
+    font-weight: $heavy-bold;
+}
+
+h1, h2 {
+    font-size: $title-font-size;
+}
+
+h3 {
+    font-size: $subtitle-font-size;
 }
 
 a {
