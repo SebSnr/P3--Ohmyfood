@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,qDAAqD",
+    "sources": [
+        "../../scss/layout/index-section.scss"
+    ],
+    "names": [],
+    "file": "index-section.css"
+}
