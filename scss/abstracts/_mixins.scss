@@ -18,6 +18,11 @@
     padding-right: $screen-padding;
 }
 
+@mixin sm-border-top-radius {
+    border-top-left-radius: $main-border-radius-card;
+    border-top-right-radius: $main-border-radius-card;
+}
+
 
 
 

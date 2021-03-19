@@ -32,8 +32,7 @@
         overflow: hidden;
         object-fit: cover;
         object-position: 50% 60%;
-        border-top-left-radius: $main-border-radius-card;
-        border-top-right-radius: $main-border-radius-card;
+        @include sm-border-top-radius;
     }
 
     &__content {
@@ -53,7 +52,7 @@
             }
         }
 
-        &__heartlogo {
+        &__heart-logo {
             // border: solid green;
             justify-self: end;
             align-self: center;

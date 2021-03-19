@@ -1,0 +1,28 @@
+/****************** page menu ******************/
+
+.page-menu__banner {
+
+    &__img {
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+        
+        border: solid saddlebrown;
+    }
+}
+
+.page-menu__content {
+    background-color: $light-color-background!important;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    transform: translateY(-50px);
+
+    border: green solid;
+
+    &__container {
+        @include max-width-mobile-container;
+        @include screen-padding;
+        border: solid salmon;
+
+    }
+}

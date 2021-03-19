@@ -55,7 +55,6 @@ li {
   display: grid;
   -ms-grid-columns: (1fr)[6];
       grid-template-columns: repeat(6, 1fr);
-  min-width: 280px;
 }
 
 .header__img {
@@ -336,7 +335,7 @@ li {
   padding-bottom: 0.3rem;
 }
 
-.rs-card__content__heartlogo {
+.rs-card__content__heart-logo {
   -ms-grid-column-align: end;
       justify-self: end;
   -ms-flex-item-align: center;
@@ -362,5 +361,31 @@ li {
 
 .submit-btn:focus {
   outline: none;
+}
+
+/****************** page menu ******************/
+.page-menu__banner__img {
+  width: 100%;
+  height: 250px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border: solid saddlebrown;
+}
+
+.page-menu__content {
+  background-color: #f6f6f6 !important;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  -webkit-transform: translateY(-50px);
+          transform: translateY(-50px);
+  border: green solid;
+}
+
+.page-menu__content__container {
+  max-width: 500px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  border: solid salmon;
 }
 /*# sourceMappingURL=main.css.map */
