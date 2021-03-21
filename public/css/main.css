@@ -17,6 +17,10 @@ body {
   margin-right: auto;
 }
 
+fieldset {
+  border: none;
+}
+
 /****************** general typographies ******************/
 h1, h2, h3, h4, p, a, button {
   font-family: 'Roboto', sans-serif;
@@ -363,6 +367,71 @@ li {
   outline: none;
 }
 
+.menu-form {
+  height: 21rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.form-category__title {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  font-weight: normal;
+  margin-top: 1.7rem;
+}
+
+.form-category__title:after {
+  content: "";
+  display: block;
+  margin-top: 2px;
+  width: 50px;
+  border-bottom: 3px solid #99E2D0;
+}
+
+.form-category__item {
+  -webkit-box-shadow: 0 2px 6px  #dfdfdf;
+          box-shadow: 0 2px 6px  #dfdfdf;
+  border-radius: 20px;
+  background-color: white;
+}
+
+.form-category__item__checkbox {
+  display: none;
+}
+
+.form-category__item__checkbox:checked ~ * {
+  background-color: green;
+}
+
+.form-category__item__label {
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border: solid purple;
+  cursor: pointer;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 89% 11%;
+      grid-template-columns: 89% 11%;
+}
+
+.form-category__item__product h4 {
+  padding-bottom: 0.3rem;
+  font-size: 1.1rem;
+}
+
+.form-category__item__price {
+  border: gold solid;
+}
+
 /****************** page menu ******************/
 .page-menu__banner__img {
   width: 100%;
@@ -404,58 +473,5 @@ li {
   margin-left: auto;
   margin-right: auto;
   margin-top: 1.7rem;
-}
-
-.restaurant-article {
-  height: 21rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-}
-
-.restaurant-article__category {
-  font-size: 1.2rem;
-  text-transform: uppercase;
-  font-weight: normal;
-  margin-top: 1.7rem;
-}
-
-.restaurant-article__category--border {
-  margin-top: 2px;
-  width: 50px;
-  border-bottom: 3px solid #99E2D0;
-}
-
-.restaurant-article__item {
-  -webkit-box-shadow: 0 2px 6px  #dfdfdf;
-          box-shadow: 0 2px 6px  #dfdfdf;
-  border-radius: 20px;
-  padding-left: 15px;
-  padding-right: 15px;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 89% 11%;
-      grid-template-columns: 89% 11%;
-  padding-top: 15px;
-  padding-bottom: 15px;
-  background-color: white;
-}
-
-.restaurant-article__item h4 {
-  padding-bottom: 0.3rem;
-  font-size: 1.1rem;
-}
-
-.restaurant-article__item__price {
-  -ms-flex-item-align: end;
-      -ms-grid-row-align: end;
-      align-self: end;
-  border: white solid;
 }
 /*# sourceMappingURL=main.css.map */
