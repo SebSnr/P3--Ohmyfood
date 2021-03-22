@@ -30,16 +30,23 @@
 }
 
 .restaurant-name {
-    display: grid;
-    grid-template-columns: 80% 20%;
+    display: flex;
+    justify-content: space-between;
+    padding-right: $screen-padding;
     // margin-top: $margin-bottom-title;
     // margin-bottom: $margin-bottom-title;
+
     
     &__title {
         font-family: 'Shrikhand', cursive;
         font-weight: $light-bold;
-
     }
+
+    &__heart-logo {
+        flex-basis: 50px;
+        text-align: center;
+    }
+
 }
 
 .menu-form button {

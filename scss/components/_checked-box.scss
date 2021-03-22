@@ -1,0 +1,14 @@
+/****************** checked-box ******************/
+
+.checked-box {
+
+    background-color: $tertiary-color;
+    // position: absolute;
+    width: $checked-width;
+    // height: 100%;
+    height: calc(100% + 2* #{$screen-padding});
+    border-top-right-radius: $main-border-radius-card;
+    border-bottom-right-radius: $main-border-radius-card;
+    transform: translate(9999px, - $screen-padding);
+    // transform: scaleX(0);
+}   

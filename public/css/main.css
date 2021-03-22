@@ -125,7 +125,6 @@ li {
       -ms-flex-pack: center;
           justify-content: center;
   justify-self: center;
-  height: 15rem;
 }
 
 .footer-container__title, .footer-container i, .footer-container a {
@@ -137,17 +136,16 @@ li {
   padding-right: 15px;
 }
 
-@media screen and (max-width: 535px) {
-  .footer-container__title, .footer-container__navigation {
-    margin-left: 35px;
-  }
-}
-
 .footer-container__title {
   font-family: 'Shrikhand', cursive;
   font-size: 1.2rem;
   font-weight: 200;
-  margin-bottom: 1.3rem;
+  margin-top: 1.7rem;
+  margin-bottom: 1.7rem;
+}
+
+.footer-container__navigation {
+  margin-bottom: 1.7rem;
 }
 
 .footer-container__navigation__list {
@@ -388,6 +386,7 @@ li {
           box-shadow: 0 2px 6px  #dfdfdf;
   border-radius: 20px;
   background-color: white;
+  position: relative;
   padding-left: 15px;
   padding-right: 15px;
   padding-top: 15px;
@@ -405,13 +404,10 @@ li {
   display: none;
 }
 
-.category-box__checkbox:checked ~ .category-box__price {
-  -webkit-transform: translateX(-50px);
-          transform: translateX(-50px);
-}
-
-.category-box__checkbox:checked ~ .category-box__product {
-  width: calc(100% - 50px);
+.category-box__checkbox:checked ~ .checked-box {
+  -webkit-transform: translate(15px, -15px);
+          transform: translate(15px, -15px);
+  position: relative;
 }
 
 .category-box__checkbox + .category-box__label {
@@ -443,29 +439,12 @@ li {
 }
 
 .category-box__price {
-  border: gold solid;
   -ms-flex-item-align: end;
       align-self: flex-end;
   text-align: center;
   font-weight: 900;
-  position: relative;
-  -webkit-transform: translateX(0);
-          transform: translateX(0);
   -ms-flex-preferred-size: 50px;
       flex-basis: 50px;
-}
-
-.category-box__price::after {
-  content: "";
-  display: none;
-  background-color: #99E2D0;
-  width: 50px;
-  height: 75px;
-  position: absolute;
-  right: -65px;
-  bottom: -15px;
-  border-top-right-radius: 20px;
-  border-bottom-right-radius: 20px;
 }
 
 /****************** buttons ******************/
@@ -484,6 +463,17 @@ li {
 
 .submit-btn:focus {
   outline: none;
+}
+
+/****************** checked-box ******************/
+.checked-box {
+  background-color: #99E2D0;
+  width: 70px;
+  height: calc(100% + 2* 15px);
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  -webkit-transform: translate(9999px, -15px);
+          transform: translate(9999px, -15px);
 }
 
 /****************** page menu ******************/
@@ -511,15 +501,24 @@ li {
 }
 
 .restaurant-name {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 80% 20%;
-      grid-template-columns: 80% 20%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-right: 15px;
 }
 
 .restaurant-name__title {
   font-family: 'Shrikhand', cursive;
   font-weight: 500;
+}
+
+.restaurant-name__heart-logo {
+  -ms-flex-preferred-size: 50px;
+      flex-basis: 50px;
+  text-align: center;
 }
 
 .menu-form button {

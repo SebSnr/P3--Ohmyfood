@@ -10,7 +10,7 @@
     flex-direction: column;
     justify-content: center;
     justify-self: center;
-    height: 15rem;
+    // height: 15rem;
     // border: solid gold;
 
     
@@ -21,22 +21,22 @@
     &__title, 
     &__navigation {
         @include screen-padding;
-        @media screen and (max-width:535px) {
-        margin-left: $screen-padding + $text-content-margin;  //a changer par une mixin ? 
-            
-        }
     }
 
     &__title {
         font-family: 'Shrikhand', cursive;
         font-size: 1.2rem;
         font-weight: 200;
-        margin-bottom: 1.3rem;
+        margin-top: $title-font-size;
+        margin-bottom: $margin-bottom-title;
+
         // border: solid gold;
     }
 
     &__navigation {
         // border: solid red;
+        margin-bottom: $title-font-size;
+
         &__list {
             line-height: 2.2rem;
             .fas {
