@@ -1,6 +1,5 @@
 /****************** variables ******************/
-/****************** paddings ******************/
-/****************** media queries ******************/
+/****************** mixins ******************/
 /****************** normalisation ******************/
 @import url("https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap");
@@ -349,24 +348,7 @@ li {
   padding-bottom: 0.3rem;
 }
 
-/****************** buttons ******************/
-.submit-btn {
-  padding: 15px 20px;
-  border-radius: 50px;
-  border: none;
-  background: linear-gradient(175deg, #FF79DA, #9356DC);
-  color: white;
-  -webkit-box-shadow: 0 1px 7px  #808080;
-          box-shadow: 0 1px 7px  #808080;
-  font-weight: 500;
-  font-size: 1.1rem;
-  cursor: pointer;
-}
-
-.submit-btn:focus {
-  outline: none;
-}
-
+/****************** menu formulaire ******************/
 .menu-form {
   height: 21rem;
   display: -webkit-box;
@@ -379,6 +361,10 @@ li {
   -ms-flex-pack: distribute;
       justify-content: space-around;
   gap: 40px;
+}
+
+.form-category {
+  min-width: 0;
 }
 
 .form-category__title {
@@ -396,33 +382,39 @@ li {
   border-bottom: 3px solid #99E2D0;
 }
 
-.form-category__item {
+/****************** menu-form box ******************/
+.category-box {
   -webkit-box-shadow: 0 2px 6px  #dfdfdf;
           box-shadow: 0 2px 6px  #dfdfdf;
   border-radius: 20px;
   background-color: white;
-  position: relative;
   padding-left: 15px;
   padding-right: 15px;
   padding-top: 15px;
   padding-bottom: 15px;
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: 6fr 0.5fr 1fr;
-      grid-template-columns: 6fr 0.5fr 1fr;
+  height: 75px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-.form-category__item__checkbox {
+.category-box__checkbox {
   display: none;
 }
 
-.form-category__item__checkbox:checked ~ .form-category__item__price {
-  background-color: green;
+.category-box__checkbox:checked ~ .category-box__price {
   -webkit-transform: translateX(-50px);
           transform: translateX(-50px);
 }
 
-.form-category__item__checkbox + .form-category__item__label {
+.category-box__checkbox:checked ~ .category-box__product {
+  width: calc(100% - 50px);
+}
+
+.category-box__checkbox + .category-box__label {
   cursor: pointer;
   position: absolute;
   width: 100%;
@@ -431,42 +423,67 @@ li {
   left: 0;
 }
 
-.form-category__item__product {
+.category-box__product {
   overflow: hidden;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 
-.form-category__item__product h4 {
+.category-box__product__title {
   padding-bottom: 0.3rem;
   font-size: 1.1rem;
   font-weight: 900;
 }
 
-.form-category__item__product h4, .form-category__item__product p {
-  overflow: hidden;
+.category-box__product__title, .category-box__product__descript {
   white-space: nowrap;
+  overflow: hidden;
   text-overflow: ellipsis;
 }
 
-.form-category__item__price {
-  font-weight: 900;
-  -ms-grid-column-align: end;
-      justify-self: end;
+.category-box__price {
+  border: gold solid;
   -ms-flex-item-align: end;
-      -ms-grid-row-align: end;
-      align-self: end;
+      align-self: flex-end;
+  text-align: center;
+  font-weight: 900;
   position: relative;
-  -ms-grid-column: 3;
-  grid-column: 3;
   -webkit-transform: translateX(0);
           transform: translateX(0);
+  -ms-flex-preferred-size: 50px;
+      flex-basis: 50px;
 }
 
-.form-category__item__price::after {
+.category-box__price::after {
   content: "";
   display: none;
-  background-color: orange;
-  width: 100px;
-  height: 100px;
+  background-color: #99E2D0;
+  width: 50px;
+  height: 75px;
+  position: absolute;
+  right: -65px;
+  bottom: -15px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+/****************** buttons ******************/
+.submit-btn {
+  padding: 15px 20px;
+  border-radius: 50px;
+  border: none;
+  background: linear-gradient(175deg, #FF79DA, #9356DC);
+  color: white;
+  -webkit-box-shadow: 0 1px 7px  #808080;
+          box-shadow: 0 1px 7px  #808080;
+  font-weight: 500;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+.submit-btn:focus {
+  outline: none;
 }
 
 /****************** page menu ******************/

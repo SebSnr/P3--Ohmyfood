@@ -1,8 +1,6 @@
+/****************** mixins ******************/
 
-@mixin border-radius-shadow {
-    box-shadow: 0 2px 6px  #dfdfdf;
-    border-radius: $main-border-radius-card;
-}
+// padding
 
 @mixin max-width-mobile-container {
     max-width: 500px;
@@ -18,23 +16,19 @@
     padding-right: $screen-padding;
 }
 
+// border
+
 @mixin sm-border-top-radius {
     border-top-left-radius: $main-border-radius-card;
     border-top-right-radius: $main-border-radius-card;
 }
 
+@mixin border-radius-shadow {
+    box-shadow: 0 2px 6px  #dfdfdf;
+    border-radius: $main-border-radius-card;
+}
 
-
-
-
-
-
-/****************** paddings ******************/
-
-
-
-/****************** media queries ******************/
-
+// media queries
 @mixin mobile {
     @media screen and (max-width: $screen-phone-max) {
         @content;
