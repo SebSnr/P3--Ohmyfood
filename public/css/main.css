@@ -387,17 +387,8 @@ li {
   border-radius: 20px;
   background-color: white;
   position: relative;
-  padding-left: 15px;
-  padding-right: 15px;
-  padding-top: 15px;
-  padding-bottom: 15px;
   height: 75px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  overflow: hidden;
 }
 
 .category-box__checkbox {
@@ -405,13 +396,12 @@ li {
 }
 
 .category-box__checkbox:checked ~ .category-box__price {
-  border: blue solid;
   margin-right: 70px;
 }
 
 .category-box__checkbox:checked ~ .checked-box {
-  -webkit-transform: scaleX(1);
-          transform: scaleX(1);
+  -webkit-transform: translateX(-70px);
+          transform: translateX(-70px);
 }
 
 .category-box__checkbox + .category-box__label {
@@ -424,6 +414,7 @@ li {
 }
 
 .category-box__product {
+  margin: 15px 0 15px 15px;
   overflow: hidden;
   -webkit-box-flex: 1;
       -ms-flex: 1;
@@ -443,16 +434,25 @@ li {
 }
 
 .category-box__price {
+  margin-top: 15px;
+  margin-bottom: 15px;
   -ms-flex-item-align: end;
       align-self: flex-end;
   text-align: center;
   font-weight: 900;
-  -ms-flex-preferred-size: 50px;
-      flex-basis: 50px;
-  -webkit-transition-property: margin-right;
-  transition-property: margin-right;
+  -ms-flex-preferred-size: calc(50px + 15px);
+      flex-basis: calc(50px + 15px);
   -webkit-transition-duration: 2s;
           transition-duration: 2s;
+}
+
+.category-box .category-flex {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: calc(100% + 70px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 /****************** buttons ******************/
@@ -476,15 +476,13 @@ li {
 /****************** checked-box ******************/
 .checked-box {
   background-color: #99E2D0;
-  position: absolute;
-  right: 0;
-  top: 0;
-  width: 70px;
-  height: 100%;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
-  -webkit-transform: scaleX(0);
-          transform: scaleX(0);
+  width: 70px;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
   -webkit-transition-duration: 2s;
           transition-duration: 2s;
   -webkit-transform-origin: right;
