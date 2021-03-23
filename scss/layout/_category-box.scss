@@ -19,23 +19,15 @@
         display: none;
         
         &:checked ~ .category-box__price {
-            // background-color: green;
-            // transform: translateX(-50px);
-            // flex-basis: 100px;
-            // margin-right: $checked-width;
-            
-        }
-        &:checked ~ .category-box__product {
-            // border: saddlebrown solid;
-            // width: calc(100% - 50px);
-        }
-        &:checked ~ .checked-box {
-            // transform: translateX($screen-padding);
-            transform: translate($screen-padding, -$screen-padding);
-            position: relative;
-
+            border: blue solid;
+            margin-right: $checked-width;
         }
         
+        &:checked ~ .checked-box {
+            transform: scaleX(1);
+
+        }
+       
     }
     
     &__checkbox + &__label {
@@ -73,6 +65,8 @@
         text-align: center;
         font-weight: $heavy-bold;
         flex-basis: 50px;
+        transition-property: margin-right;
+        transition-duration: 2s;
     }
 
     

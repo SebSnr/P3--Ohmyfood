@@ -2,7 +2,6 @@
 /****************** mixins ******************/
 /****************** normalisation ******************/
 @import url("https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap");
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -59,6 +58,7 @@ li {
   color: #696969;
 }
 
+/****************** animation ******************/
 /****************** header style ******************/
 .header {
   padding-left: 15px;
@@ -404,10 +404,14 @@ li {
   display: none;
 }
 
+.category-box__checkbox:checked ~ .category-box__price {
+  border: blue solid;
+  margin-right: 70px;
+}
+
 .category-box__checkbox:checked ~ .checked-box {
-  -webkit-transform: translate(15px, -15px);
-          transform: translate(15px, -15px);
-  position: relative;
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
 }
 
 .category-box__checkbox + .category-box__label {
@@ -445,6 +449,10 @@ li {
   font-weight: 900;
   -ms-flex-preferred-size: 50px;
       flex-basis: 50px;
+  -webkit-transition-property: margin-right;
+  transition-property: margin-right;
+  -webkit-transition-duration: 2s;
+          transition-duration: 2s;
 }
 
 /****************** buttons ******************/
@@ -468,12 +476,19 @@ li {
 /****************** checked-box ******************/
 .checked-box {
   background-color: #99E2D0;
+  position: absolute;
+  right: 0;
+  top: 0;
   width: 70px;
-  height: calc(100% + 2* 15px);
+  height: 100%;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
-  -webkit-transform: translate(9999px, -15px);
-          transform: translate(9999px, -15px);
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transition-duration: 2s;
+          transition-duration: 2s;
+  -webkit-transform-origin: right;
+          transform-origin: right;
 }
 
 /****************** page menu ******************/
