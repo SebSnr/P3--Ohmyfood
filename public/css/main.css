@@ -2,6 +2,7 @@
 /****************** mixins ******************/
 /****************** normalisation ******************/
 @import url("https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap");
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -17,6 +18,45 @@ body {
 
 fieldset {
   border: none;
+}
+
+/****************** general typographies ******************/
+h1, h2, h3, h4, p, a, button {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  color: black;
+}
+
+h1, h2, h3 {
+  font-weight: 900;
+}
+
+h1, h2 {
+  font-size: 1.7rem;
+}
+
+h3 {
+  font-size: 1.1rem;
+}
+
+a {
+  color: initial;
+  text-decoration: none;
+  background-color: transparent;
+}
+
+li {
+  list-style-type: none;
+}
+
+.fa-heart {
+  -ms-grid-column-align: center;
+      justify-self: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  font-size: 2rem;
+  color: #696969;
 }
 
 /****************** general typographies ******************/
@@ -397,11 +437,18 @@ li {
 
 .course-box .course-box-flex__input:checked ~ .course-box-flex__dish-price {
   margin-right: 70px;
+  -webkit-transition: 1s ease-in;
+  transition: 1s ease-in;
 }
 
 .course-box .course-box-flex__input:checked ~ .check-icon-box {
   -webkit-transform: translateX(-70px);
           transform: translateX(-70px);
+}
+
+.course-box .course-box-flex__input:checked ~ .check-icon-box .fa-check {
+  -webkit-transform: rotate(-360deg);
+          transform: rotate(-360deg);
 }
 
 .course-box .course-box-flex__label {
@@ -470,12 +517,39 @@ li {
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
   width: 70px;
-  -webkit-transform: scaleX(1);
-          transform: scaleX(1);
-  -webkit-transition-duration: 2s;
-          transition-duration: 2s;
-  -webkit-transform-origin: right;
-          transform-origin: right;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: -webkit-transform 1s ease-in;
+  transition: -webkit-transform 1s ease-in;
+  transition: transform 1s ease-in;
+  transition: transform 1s ease-in, -webkit-transform 1s ease-in;
+}
+
+.check-icon-box .fa-check {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  vertical-align: middle;
+  background-color: white;
+  color: #99E2D0;
+  font-size: 1.1rem;
+  border-radius: 50%;
+  padding: 0.4rem;
+  -webkit-transition: -webkit-transform 1.3s ease-in-out;
+  transition: -webkit-transform 1.3s ease-in-out;
+  transition: transform 1.3s ease-in-out;
+  transition: transform 1.3s ease-in-out, -webkit-transform 1.3s ease-in-out;
 }
 
 /****************** page menu ******************/

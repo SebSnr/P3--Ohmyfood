@@ -11,18 +11,24 @@
         position: relative;
         width: calc(100% + #{$check-icon-box-width} );
         display: flex;
+
         // border: solid saddlebrown;
     
         &__input {
             display: none;
 
             &:checked ~ .course-box-flex__dish-price {
-                // border: blue solid;
                 margin-right: $check-icon-box-width;
+                transition: 1s ease-in;
+
+                // border: blue solid;
             }
             
             &:checked ~ .check-icon-box {
-                transform: translateX( - $check-icon-box-width  );
+                transform: translateX( - $check-icon-box-width);
+                .fa-check {
+                    transform: rotate(-360deg);
+                }
             }
         }
 
@@ -32,16 +38,17 @@
             width: 100%;
             height:100%;
             top: 0;
-            left:0;                
-            // border: solid red;
+            left:0;       
 
+            // border: solid red;
         }
         
         &__dish {
-            // border: solid purple;
             margin: $screen-padding 0 $screen-padding $screen-padding;
             overflow: hidden;
             flex: 1;
+
+            // border: solid purple;
 
             &__title {
                 padding-bottom: $padding-bottom-item-title;
@@ -58,7 +65,6 @@
         }
 
         &__dish-price {
-            // border: gold solid;
             margin-top: $screen-padding;
             margin-bottom: $screen-padding;
             align-self: flex-end;
@@ -66,6 +72,7 @@
             font-weight: $heavy-bold;
             flex-basis: calc(50px + #{$screen-padding});
             transition-duration: 2s;
+            // border: gold solid;
         }
 
         

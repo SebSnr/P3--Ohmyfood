@@ -16,3 +16,45 @@ body {
 fieldset {
     border: none;
   }
+
+/****************** general typographies ******************/
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap');
+
+h1, h2, h3, h4, p, a, button {
+    font-family: 'Roboto', sans-serif;
+    font-size: $font-size;
+    color: $font-color ;
+}
+
+
+h1, h2, h3 {
+    font-weight: $heavy-bold;
+}
+
+h1, h2 {
+    font-size: $title-font-size;
+}
+
+h3 {
+    font-size: $subtitle-font-size;
+}
+
+a {
+    color: initial;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+li {
+    list-style-type: none;
+}
+
+.fa-heart {
+    justify-self: center;
+    align-self: center;
+    font-size: 2rem;
+    color: $main-color-logo;
+}
+
+
