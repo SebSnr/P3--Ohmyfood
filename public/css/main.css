@@ -361,27 +361,19 @@ li {
   gap: 40px;
 }
 
-.form-category {
+.course-category {
   min-width: 0;
 }
 
-.form-category__title {
-  font-size: 1.2rem;
+.course-category__title {
   text-transform: uppercase;
   font-weight: normal;
+  font-size: 1.2rem;
   margin-top: 1.7rem;
 }
 
-.form-category__title:after {
-  content: "";
-  display: block;
-  margin-top: 2px;
-  width: 50px;
-  border-bottom: 3px solid #99E2D0;
-}
-
 /****************** menu-form box ******************/
-.category-box {
+.course-box {
   -webkit-box-shadow: 0 2px 6px  #dfdfdf;
           box-shadow: 0 2px 6px  #dfdfdf;
   border-radius: 20px;
@@ -391,20 +383,28 @@ li {
   overflow: hidden;
 }
 
-.category-box__checkbox {
+.course-box .course-box-flex {
+  position: relative;
+  width: calc(100% + 70px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.course-box .course-box-flex__input {
   display: none;
 }
 
-.category-box__checkbox:checked ~ .category-box__price {
+.course-box .course-box-flex__input:checked ~ .course-box-flex__dish-price {
   margin-right: 70px;
 }
 
-.category-box__checkbox:checked ~ .checked-box {
+.course-box .course-box-flex__input:checked ~ .check-icon-box {
   -webkit-transform: translateX(-70px);
           transform: translateX(-70px);
 }
 
-.category-box__checkbox + .category-box__label {
+.course-box .course-box-flex__label {
   cursor: pointer;
   position: absolute;
   width: 100%;
@@ -413,7 +413,7 @@ li {
   left: 0;
 }
 
-.category-box__product {
+.course-box .course-box-flex__dish {
   margin: 15px 0 15px 15px;
   overflow: hidden;
   -webkit-box-flex: 1;
@@ -421,19 +421,19 @@ li {
           flex: 1;
 }
 
-.category-box__product__title {
+.course-box .course-box-flex__dish__title {
   padding-bottom: 0.3rem;
   font-size: 1.1rem;
   font-weight: 900;
 }
 
-.category-box__product__title, .category-box__product__descript {
+.course-box .course-box-flex__dish__title, .course-box .course-box-flex__dish__descript {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
-.category-box__price {
+.course-box .course-box-flex__dish-price {
   margin-top: 15px;
   margin-bottom: 15px;
   -ms-flex-item-align: end;
@@ -444,15 +444,6 @@ li {
       flex-basis: calc(50px + 15px);
   -webkit-transition-duration: 2s;
           transition-duration: 2s;
-}
-
-.category-box .category-flex {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  width: calc(100% + 70px);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
 }
 
 /****************** buttons ******************/
@@ -473,14 +464,12 @@ li {
   outline: none;
 }
 
-/****************** checked-box ******************/
-.checked-box {
+/****************** check-icon-box ******************/
+.check-icon-box {
   background-color: #99E2D0;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
   width: 70px;
-  -webkit-box-sizing: content-box;
-          box-sizing: content-box;
   -webkit-transform: scaleX(1);
           transform: scaleX(1);
   -webkit-transition-duration: 2s;
@@ -497,7 +486,7 @@ li {
      object-fit: cover;
 }
 
-.page-menu__content {
+.page-menu__container {
   background-color: #f6f6f6;
   border-top-left-radius: 50px;
   border-top-right-radius: 50px;
@@ -506,14 +495,14 @@ li {
   padding-top: 1.7rem;
 }
 
-.page-menu__content__container {
+.page-menu__container__content {
   max-width: 500px;
   margin: 0 auto;
   padding-left: 15px;
   padding-right: 15px;
 }
 
-.restaurant-name {
+.page-menu-header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -523,18 +512,18 @@ li {
   padding-right: 15px;
 }
 
-.restaurant-name__title {
+.page-menu-header__title {
   font-family: 'Shrikhand', cursive;
   font-weight: 500;
 }
 
-.restaurant-name__heart-logo {
+.page-menu-header__heart-logo {
   -ms-flex-preferred-size: 50px;
       flex-basis: 50px;
   text-align: center;
 }
 
-.menu-form button {
+.page-menu-form button {
   display: block;
   margin-left: auto;
   margin-right: auto;

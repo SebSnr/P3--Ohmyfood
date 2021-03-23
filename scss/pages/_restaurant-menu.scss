@@ -14,28 +14,26 @@
     }
 }
 
-.page-menu__content {
+.page-menu__container {
     background-color: $light-color-background;
     border-top-left-radius: 50px;
     border-top-right-radius: 50px;
     transform: translateY(-50px);
     padding-top: $margin-bottom-title;
     
-    &__container {
+    &__content  {
         @include max-width-mobile-container;
         @include screen-padding;
-        
         // border: solid salmon;
     }
 }
 
-.restaurant-name {
+.page-menu-header {
     display: flex;
     justify-content: space-between;
     padding-right: $screen-padding;
     // margin-top: $margin-bottom-title;
     // margin-bottom: $margin-bottom-title;
-
     
     &__title {
         font-family: 'Shrikhand', cursive;
@@ -49,7 +47,7 @@
 
 }
 
-.menu-form button {
+.page-menu-form button {   // renommer travailler
     display: block;
     margin-left: auto;
     margin-right: auto;

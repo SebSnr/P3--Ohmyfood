@@ -1,84 +1,74 @@
 /****************** menu-form box ******************/
 
-.category-box {
+.course-box {
     @include border-radius-shadow;
     background-color: white;
     position: relative;
-    
-    // padding-left: $screen-padding;
-    // padding-top: $screen-padding;
-    // padding-bottom: $screen-padding;
-    
-    height: 75px; ///pour :after
-
+    height: 75px;
     overflow: hidden;
-    
-    // display: flex;
-    // justify-content: space-between;
 
-    
-    &__checkbox {
-        display: none;
-        
-        &:checked ~ .category-box__price {
-            // border: blue solid;
-            margin-right: $checked-width;
-        }
-        
-        &:checked ~ .checked-box {
-            transform: translateX( - $checked-width  );
-
-
-        }
-    }
-    
-    &__checkbox + &__label {
-        cursor: pointer;
-        position: absolute;
-        width: 100%;
-            height:100%;
-            top: 0;
-            left:0;
-            
-            // border: solid red;
-        } 
-        
-    &__product {
-        // border: solid purple;
-        margin: $screen-padding 0 $screen-padding $screen-padding;
-        overflow: hidden;
-        flex: 1;
-
-        &__title {
-            padding-bottom: $padding-bottom-item-title;
-            font-size: $subtitle-font-size;
-            font-weight: $heavy-bold;
-        }
-            
-        &__title, 
-        &__descript {
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-        }
-    }
-
-    &__price {
-        // border: gold solid;
-        margin-top: $screen-padding;
-        margin-bottom: $screen-padding;
-        align-self: flex-end;
-        text-align: center;
-        font-weight: $heavy-bold;
-        flex-basis: calc(50px + #{$screen-padding});
-        transition-duration: 2s;
-    }
-
-    .category-flex {
-        box-sizing: border-box;
-        width: calc(100% + #{$checked-width} );
+    .course-box-flex {
+        position: relative;
+        width: calc(100% + #{$check-icon-box-width} );
         display: flex;
         // border: solid saddlebrown;
+    
+        &__input {
+            display: none;
+
+            &:checked ~ .course-box-flex__dish-price {
+                // border: blue solid;
+                margin-right: $check-icon-box-width;
+            }
+            
+            &:checked ~ .check-icon-box {
+                transform: translateX( - $check-icon-box-width  );
+            }
+        }
+
+        &__label {
+            cursor: pointer;
+            position: absolute;
+            width: 100%;
+            height:100%;
+            top: 0;
+            left:0;                
+            // border: solid red;
+
+        }
+        
+        &__dish {
+            // border: solid purple;
+            margin: $screen-padding 0 $screen-padding $screen-padding;
+            overflow: hidden;
+            flex: 1;
+
+            &__title {
+                padding-bottom: $padding-bottom-item-title;
+                font-size: $subtitle-font-size;
+                font-weight: $heavy-bold;
+            }
+                
+            &__title, 
+            &__descript {
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+        }
+
+        &__dish-price {
+            // border: gold solid;
+            margin-top: $screen-padding;
+            margin-bottom: $screen-padding;
+            align-self: flex-end;
+            text-align: center;
+            font-weight: $heavy-bold;
+            flex-basis: calc(50px + #{$screen-padding});
+            transition-duration: 2s;
+        }
+
+        
 
     }
     

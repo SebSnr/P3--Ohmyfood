@@ -1,19 +1,11 @@
-/****************** checked-box ******************/
+/****************** check-icon-box ******************/
 
-.checked-box {
+.check-icon-box {
 
     background-color: $tertiary-color;
-    // position: absolute;
-    // right: 0;
-    // top: 0;
     border-top-right-radius: $main-border-radius-card;
     border-bottom-right-radius: $main-border-radius-card;
-    width: $checked-width;
-    // height: 100px;
-    box-sizing: content-box;
-
-
-    // transform: translate(9999px, - $screen-padding);
+    width: $check-icon-box-width;
     
     transform: scaleX(1);
     transition-duration: 2s;
