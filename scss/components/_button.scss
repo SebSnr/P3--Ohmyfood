@@ -27,56 +27,95 @@
 .favorite-btn {
     font-size: 2rem;
     color: $main-color-logo;
-    z-index: 9999;
-    
-    &:hover, &:active {
-        
-        .heart-logo-favorite {
-            // color: red;
-            // font-weight: bold;
-            position: relative;
-        }
+    // z-index: 9999;
+    width: min-content;
+    height: min-content;
+    justify-self: center;  
+    align-self: center;
 
-        .heart-logo-favorite::after{
-            opacity: 1;
+    position: relative;
+    // border: solid green;
+    // width: 200px;
+    // height: 200px;
+    
+    
+    
+    .heart-logo-favorite {
+        // color: blue;
+        font-size: 2rem;
+        // opacity: 1;
+        overflow: hidden;
+        
+        &::after {
+            position: absolute;
+            content: "\f004";
+            font-weight: bold;
+            color: #9b0101;
+            left: 0;
+            top: 0;
+            // z-index: 1;
+            opacity: 0;
         }
     }
     
-    .heart-logo-favorite::after  {
-        position: absolute;
-        top: 0;
-        left: 0;
-        content: "\f004";
-        font-weight: bold;
-        color: rgb(155, 1, 1);
-        transition: opacity 3s;
-        opacity: 0;
-        transform-origin: bottom;
-        animation: heart-logo-full alternate-reverse ;
+    &:hover .heart-logo-favorite::after {
+        opacity: 1;
+        animation: heart-logo 2s both ease-out alternate 2;
+        }
+
+    &:hover .heart-logo-favorite {
+        animation: heart-logo 2s both ease-out alternate 2;
+
+
     }
 
 }
+ 
+// animation : heart-logo 2s linear alternate both; 
 
-@keyframes heart-logo-full {
+
+
+@keyframes heart-logo {
     0% {
-        transform: scaleY(0);
+        opacity: 1;
+        transform: scale(0, 0);
     }
-    
-    25% {
-        transform: scaleY(0.2);
-    }
+
 
     50% {
+        // opacity: 0.5;
+        // animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+    }
 
+    80% {
+        // opacity: 1;
+        transform: scale(1.1, 1.1);
     }
 
     100% {
-        transform: scaleY(1);
-
+        opacity: 1;
+        transform: scale(1, 1);
     }
-
-
-
-
-
 }
+
+
+
+
+// @keyframes heart-logo-full {
+//     0% {
+//         transform: scale(1, 1);
+//     }
+    
+//     25% {
+//         // transform: scaleY(0.2);
+//     }
+
+//     50% {
+
+//     }
+
+//     100% {
+//         transform: scale(1, 1);
+
+//     }
+// }

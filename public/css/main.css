@@ -46,6 +46,7 @@ a, button {
   border: none;
   cursor: pointer;
   outline: none;
+  background: none;
 }
 
 a:active, button:active {
@@ -424,41 +425,50 @@ a:active, button:active {
 .favorite-btn {
   font-size: 2rem;
   color: #696969;
-  z-index: 9999;
-}
-
-.favorite-btn:hover .heart-logo-favorite, .favorite-btn:active .heart-logo-favorite {
+  width: min-content;
+  height: min-content;
+  justify-self: center;
+  align-self: center;
   position: relative;
 }
 
-.favorite-btn:hover .heart-logo-favorite::after, .favorite-btn:active .heart-logo-favorite::after {
-  opacity: 1;
+.favorite-btn .heart-logo-favorite {
+  font-size: 2rem;
+  overflow: hidden;
 }
 
 .favorite-btn .heart-logo-favorite::after {
   position: absolute;
-  top: 0;
-  left: 0;
   content: "\f004";
   font-weight: bold;
   color: #9b0101;
-  transition: opacity 3s;
+  left: 0;
+  top: 0;
   opacity: 0;
-  transform-origin: bottom;
-  animation: heart-logo-full alternate-reverse;
 }
 
-@keyframes heart-logo-full {
+.favorite-btn:hover .heart-logo-favorite::after {
+  opacity: 1;
+  animation: heart-logo 2s both ease-out alternate 2;
+}
+
+.favorite-btn:hover .heart-logo-favorite {
+  animation: heart-logo 2s both ease-out alternate 2;
+}
+
+@keyframes heart-logo {
   0% {
-    transform: scaleY(0);
-  }
-  25% {
-    transform: scaleY(0.2);
+    opacity: 1;
+    transform: scale(0, 0);
   }
   50% {
   }
+  80% {
+    transform: scale(1.1, 1.1);
+  }
   100% {
-    transform: scaleY(1);
+    opacity: 1;
+    transform: scale(1, 1);
   }
 }
 
