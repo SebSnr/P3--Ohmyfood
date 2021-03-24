@@ -5,19 +5,18 @@
 
 // base
 @import "base/base";
-@import "base/typography";
 @import "base/animation";
 
 // layout
 @import "layout/header";
 @import "layout/footer";
 @import "layout/search-section";
-@import "layout/explications-section";
+@import "layout/explications-section"; 
 @import "layout/index-section";
 @import "layout/form";
 @import "layout/course-box";
-
-
+ 
+ 
 //components
 @import "components/button";
 @import "components/card";

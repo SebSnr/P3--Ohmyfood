@@ -12,10 +12,10 @@
         width: calc(100% + #{$check-icon-box-width} );
         display: flex;
 
-        // border: solid saddlebrown;
+        // border: solid saddlebrown; 
     
         &__input {
-            display: none;
+            display: none;  
 
             &:checked ~ .course-box-flex__dish-price {
                 margin-right: $check-icon-box-width;
@@ -48,7 +48,7 @@
             overflow: hidden;
             flex: 1;
 
-            // border: solid purple;
+            // border: solid purple; 
 
             &__title {
                 padding-bottom: $padding-bottom-item-title;
