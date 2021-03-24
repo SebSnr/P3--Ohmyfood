@@ -3,10 +3,18 @@
 .location-banner {
     background-color: #ececec;
     height: 3rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-shadow: 
+        inset 0px 8px 8px -10px #808080;
+            box-shadow: 
         inset 0px 8px 8px -10px #808080;
 
     &__city {
@@ -20,10 +28,15 @@
     padding-top: 2.5rem;
     padding-bottom: 2.5rem;
     text-align: center;
-
-
+    
+    
     &__title, &__title ~ *{
-        @include screen-margin;
+        margin-left: auto;
+        margin-right: auto;
+        @include screen-padding;
+        @media screen and (max-width:520px) {
+            max-width: 340px;
+        }
     }
 }
 

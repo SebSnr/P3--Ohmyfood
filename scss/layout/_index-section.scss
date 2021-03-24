@@ -16,15 +16,18 @@
         display: grid;
         grid-template-rows: repeat(4, 300px);
         grid-gap: 20px;
-        // border: red solid;
         margin-top: $screen-padding;
         margin-bottom: $screen-padding;
+
+        // border: red solid;
     }
 }
 
 .rs-card {
-    // border: gold solid;
     @include border-radius-shadow;
+    display: block;
+    
+    // border: gold solid;
 
     &__photo {
         width: 100%;
@@ -41,19 +44,22 @@
         grid-template-columns: 90% 10%;
         padding-left: $text-content-margin;
         padding-right: $text-content-margin;
+
         // border: blue solid;
     
         &__items {
             margin: auto 0;
             align-self: center;
             // border: purple solid;
+
             h3 {
                 padding-bottom: $padding-bottom-item-title;
-            }
+            } 
         }
-    }
-
     
-
-
+        .favorite-btn {
+            // justify-self: center;  
+            // align-self: center;
+        }   
+    }
 }

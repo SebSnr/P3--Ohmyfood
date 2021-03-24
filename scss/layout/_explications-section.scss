@@ -33,6 +33,9 @@
     align-items: center;
     // border: solid gold;
     
+    &:last-child {
+        background-color: lighten($primary-color, 37);
+    }    
     
     &__numbers, &__logo, &__text {
         display: inline-block;
@@ -51,12 +54,13 @@
     
     &__logo {
         flex: 0 1 20%;
-        // margin-right: 3rem;
         text-align: center;
         font-size: 1.1rem;
         color: $main-color-logo;
+
         // border: red solid;
     }
+    
     
     &__text {
         flex: 0 1 70%;
@@ -68,5 +72,9 @@
     .fa-mobile-alt {
         font-size: 1.4rem;
         // border: solid;
+    }
+
+    .fa-store {
+        color: $primary-color;
     }
 }

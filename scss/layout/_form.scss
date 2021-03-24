@@ -1,11 +1,18 @@
 /****************** menu formulaire ******************/
 
-.menu-form {
+.page-menu-form {
     height: 21rem;  // a affiner
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     gap: 40px;  // a test
+
+    // border: solid salmon;
+    
+    &__submit-btn {
+        margin-top: $margin-bottom-title;
+        align-self: center;  //car dans flexbox
+    }
 }
 
 .course-category {

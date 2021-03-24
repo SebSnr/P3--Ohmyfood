@@ -1,16 +1,82 @@
 /****************** buttons ******************/
 
-.submit-btn {
+.big-btn {
+    display: inline-block;
+    @include screen-margin;
     padding: 15px 20px;
     border-radius: 50px;
     border: none;
     background: linear-gradient(175deg, $secondary-color, $primary-color);
     color: white;
-    box-shadow: 0 1px 7px  #808080;
+    box-shadow: 0 1px 7px $box-shadow-btn-color;
     font-weight: 500;
     font-size: $subtitle-font-size;
     cursor: pointer;
-    &:focus {
+    
+    &:hover, &:focus {
         outline: none;
+        outline-color: red;
+        background: linear-gradient(175deg, lighten($secondary-color, 2), lighten($primary-color, 2));
+        box-shadow: 0 1px 7px darken($box-shadow-btn-color, 10), ;
+
+        // filter: brightness(101%);
+        // border: blue solid;
+        }
+}
+
+.favorite-btn {
+    font-size: 2rem;
+    color: $main-color-logo;
+    z-index: 9999;
+    
+    &:hover, &:active {
+        
+        .heart-logo-favorite {
+            // color: red;
+            // font-weight: bold;
+            position: relative;
+        }
+
+        .heart-logo-favorite::after{
+            opacity: 1;
+        }
     }
+    
+    .heart-logo-favorite::after  {
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: "\f004";
+        font-weight: bold;
+        color: rgb(155, 1, 1);
+        transition: opacity 3s;
+        opacity: 0;
+        transform-origin: bottom;
+        animation: heart-logo-full alternate-reverse ;
+    }
+
+}
+
+@keyframes heart-logo-full {
+    0% {
+        transform: scaleY(0);
+    }
+    
+    25% {
+        transform: scaleY(0.2);
+    }
+
+    50% {
+
+    }
+
+    100% {
+        transform: scaleY(1);
+
+    }
+
+
+
+
+
 }

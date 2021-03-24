@@ -10,12 +10,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
-    // transform: scaleX(1);
-    // transition-duration: 2s;
-    // transform-origin: right;
-
-    transition: transform 1s ease-in;
+    transition: transform 1s ease-in-out;
 
     .fa-check {
         // position: absolute;

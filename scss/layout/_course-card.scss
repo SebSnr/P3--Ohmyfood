@@ -1,13 +1,13 @@
-/****************** menu-form box ******************/
+/****************** menu-form card ******************/
 
-.course-box {
+.course-card {
     @include border-radius-shadow;
     background-color: white;
     position: relative;
     height: 75px;
     overflow: hidden;
 
-    .course-box-flex {
+    .course-card-flex {
         position: relative;
         width: calc(100% + #{$check-icon-box-width} );
         display: flex;
@@ -17,29 +17,32 @@
         &__input {
             display: none;  
 
-            &:checked ~ .course-box-flex__dish-price {
+            &:checked ~ .course-card-flex__dish-price,
+            &:hover ~ .course-card-flex__dish-price {
                 margin-right: $check-icon-box-width;
-                transition: 1s ease-in;
-
+                
                 // border: blue solid;
             }
             
-            &:checked ~ .check-icon-box {
+            &:checked ~ .check-icon-box,
+            &:hover ~ .check-icon-box {
                 transform: translateX( - $check-icon-box-width);
+                
                 .fa-check {
                     transform: rotate(-360deg);
                 }
             }
         }
-
+        
         &__label {
             cursor: pointer;
             position: absolute;
             width: 100%;
             height:100%;
             top: 0;
-            left:0;       
-
+            left:0;   
+            z-index: 99999;    
+            
             // border: solid red;
         }
         
@@ -47,15 +50,15 @@
             margin: $screen-padding 0 $screen-padding $screen-padding;
             overflow: hidden;
             flex: 1;
-
+            
             // border: solid purple; 
-
+            
             &__title {
                 padding-bottom: $padding-bottom-item-title;
                 font-size: $subtitle-font-size;
                 font-weight: $heavy-bold;
             }
-                
+            
             &__title, 
             &__descript {
                 white-space: nowrap;
@@ -63,7 +66,7 @@
                 text-overflow: ellipsis;
             }
         }
-
+        
         &__dish-price {
             margin-top: $screen-padding;
             margin-bottom: $screen-padding;
@@ -71,10 +74,12 @@
             text-align: center;
             font-weight: $heavy-bold;
             flex-basis: calc(50px + #{$screen-padding});
-            transition-duration: 2s;
-            // border: gold solid;
-        }
+            transition: margin-right 1s ease-in-out ;
 
+            // border: gold solid;
+            
+        }
+        
         
 
     }
