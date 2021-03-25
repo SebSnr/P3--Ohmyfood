@@ -272,6 +272,16 @@ a:active, button:active {
   box-shadow: 0 2px 6px  #dfdfdf;
   border-radius: 20px;
   display: block;
+  position: relative;
+}
+
+.rs-card a {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
 }
 
 .rs-card__photo {
@@ -299,6 +309,12 @@ a:active, button:active {
 
 .rs-card__content__items h3 {
   padding-bottom: 0.3rem;
+}
+
+.rs-card__content .favorite-btn {
+  justify-self: center;
+  align-self: center;
+  z-index: 2;
 }
 
 /****************** menu formulaire ******************/
@@ -429,6 +445,10 @@ a:active, button:active {
   position: relative;
 }
 
+.favorite-btn:focus {
+  border: purple solid;
+}
+
 .favorite-btn .heart-logo-favorite {
   font-size: 2rem;
   color: #696969;
@@ -445,7 +465,7 @@ a:active, button:active {
   transition: all 1s cubic-bezier(0.46, 0.07, 0.85, 1.47);
 }
 
-.favorite-btn .heart-logo-favorite:hover::after, .favorite-btn .heart-logo-favorite:active::after {
+.favorite-btn .heart-logo-favorite:hover::after {
   opacity: 1;
   transform-origin: bottom;
   animation: favorite-btn-filling 1s cubic-bezier(0.46, 0.07, 0.85, 1.47);

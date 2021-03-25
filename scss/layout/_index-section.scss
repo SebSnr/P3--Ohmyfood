@@ -26,8 +26,21 @@
 .rs-card {
     @include border-radius-shadow;
     display: block;
+    position: relative;
     
     // border: gold solid;
+
+    a {
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        
+        // border: solid gold;
+    }
+
 
     &__photo {
         width: 100%;
@@ -57,9 +70,10 @@
             } 
         }
     
-        // .favorite-btn {
-        //     justify-self: center;  
-        //     align-self: center;
-        // }   
+        .favorite-btn {
+            justify-self: center;  
+            align-self: center;
+            z-index: 2;
+        }   
     }
 }

@@ -29,6 +29,11 @@
     justify-self: center;  
     align-self: center;
     position: relative;
+
+    &:focus {
+        border: purple solid; //a travailler pour click focus couleur rouge full
+
+    }
     
     .heart-logo-favorite {
         font-size: 2rem;
@@ -45,7 +50,7 @@
             transition: all 1s cubic-bezier(.46,.07,.85,1.47);
         }
 
-        &:hover, &:active {
+        &:hover{
             // color: #9b0101;
             // transform-origin: bottom;
             // transition: all 1s cubic-bezier(.46,.07,.85,1.47);
