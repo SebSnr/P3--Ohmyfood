@@ -30,10 +30,11 @@
     align-self: center;
     position: relative;
 
-    &:focus {
-        border: purple solid; //a travailler pour click focus couleur rouge full
-
-    }
+    //  &:focus .heart-logo-favorite::after {
+    //         // border: purple solid; //a travailler pour click focus couleur rouge full
+    //         outline: 0;
+    //         opacity: 1;
+    //     }
     
     .heart-logo-favorite {
         font-size: 2rem;
@@ -50,17 +51,17 @@
             transition: all 1s cubic-bezier(.46,.07,.85,1.47);
         }
 
-        &:hover{
-            // color: #9b0101;
-            // transform-origin: bottom;
-            // transition: all 1s cubic-bezier(.46,.07,.85,1.47);
+        &:hover {
+            color: #9b0101;
+            transform-origin: bottom;
+            transition: all 1s cubic-bezier(.46,.07,.85,1.47);
 
             &::after {
                 opacity: 1;
                 transform-origin: bottom;
                 animation: favorite-btn-filling 1s cubic-bezier(.46,.07,.85,1.47);
             }
-        }
+        }       
     }
 }
  

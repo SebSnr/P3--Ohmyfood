@@ -1,6 +1,6 @@
 /****************** mixins ******************/
 
-// padding
+// padding //
 
 @mixin max-width-mobile-container {
     max-width: 500px;
@@ -16,7 +16,7 @@
     padding-right: $screen-padding;
 }
 
-// border
+// border //
 
 @mixin sm-border-top-radius {
     border-top-left-radius: $main-border-radius-card;
@@ -28,7 +28,7 @@
     border-radius: $main-border-radius-card;
 }
 
-// media queries
+// media queries //
 @mixin mobile {
     @media screen and (max-width: $screen-phone-max) {
         @content;

@@ -1,0 +1,81 @@
+/****************** home page ******************/
+
+.loader-page {
+        content: "";
+        display: block;
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background-color: white;
+        z-index: 99999999999;
+        animation: loader-page 1.5s both cubic-bezier(0,.25,0,.96);   
+
+    &::before{
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        margin: auto;
+        height: 7vh;
+        width: 7vh;
+        border-radius: 100% ;
+        box-shadow: 2px 2px 7px grey;
+        border: 4px solid $primary-color ;
+        animation: load-spinner 0.4s infinite cubic-bezier(.23,.57,.79,.19) both;
+    }
+
+    &::after{
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        margin: auto;
+        height: 7vh;
+        width: 7vh;
+        border-radius: 100% ;
+        border-top: 7px solid $tertiary-color ;
+        border-right: 4px solid $tertiary-color ;
+        animation: load-spinner 0.2s infinite cubic-bezier(.23,.57,.79,.19) both;
+    }
+}
+
+@keyframes loader-page {
+    0% {
+        transform: translateX(0);
+        opacity: 1;
+        // opacity: 0.96;
+    }
+    50% {
+        opacity: 1;
+    }
+
+    80%{
+        opacity: 0.92;
+    }
+
+    99% {
+        transform: translateX(0); 
+    }
+    100% {
+        transform: translateX(99999px);
+        opacity: 1;
+    }
+}
+
+@keyframes load-spinner {
+    0% {
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+
+}
+
+
