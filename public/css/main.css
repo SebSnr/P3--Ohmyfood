@@ -417,14 +417,11 @@ a:active, button:active {
 
 .big-btn:hover, .big-btn:focus {
   outline: none;
-  outline-color: red;
   background: linear-gradient(175deg, #ff83dd, #985ede);
   box-shadow: 0 1px 7px #676767;
 }
 
 .favorite-btn {
-  font-size: 2rem;
-  color: #696969;
   width: min-content;
   height: min-content;
   justify-self: center;
@@ -434,41 +431,35 @@ a:active, button:active {
 
 .favorite-btn .heart-logo-favorite {
   font-size: 2rem;
-  overflow: hidden;
+  color: #696969;
 }
 
 .favorite-btn .heart-logo-favorite::after {
   position: absolute;
   content: "\f004";
   font-weight: bold;
-  color: #9b0101;
+  color: #cc3a3a;
   left: 0;
   top: 0;
   opacity: 0;
+  transition: all 1s cubic-bezier(0.46, 0.07, 0.85, 1.47);
 }
 
-.favorite-btn:hover .heart-logo-favorite::after {
+.favorite-btn .heart-logo-favorite:hover::after, .favorite-btn .heart-logo-favorite:active::after {
   opacity: 1;
-  animation: heart-logo 2s both ease-out alternate 2;
+  transform-origin: bottom;
+  animation: favorite-btn-filling 1s cubic-bezier(0.46, 0.07, 0.85, 1.47);
 }
 
-.favorite-btn:hover .heart-logo-favorite {
-  animation: heart-logo 2s both ease-out alternate 2;
-}
-
-@keyframes heart-logo {
+@keyframes favorite-btn-filling {
   0% {
-    opacity: 1;
     transform: scale(0, 0);
   }
-  50% {
-  }
-  80% {
-    transform: scale(1.1, 1.1);
+  90% {
+    transform: scale(1.1);
   }
   100% {
-    opacity: 1;
-    transform: scale(1, 1);
+    transform: scale(1);
   }
 }
 
@@ -527,10 +518,5 @@ a:active, button:active {
 .page-menu-header__title {
   font-family: 'Shrikhand', cursive;
   font-weight: 500;
-}
-
-.page-menu-header__heart-logo {
-  flex-basis: 50px;
-  text-align: center;
 }
 /*# sourceMappingURL=main.css.map */

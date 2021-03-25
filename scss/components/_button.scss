@@ -15,7 +15,6 @@
     
     &:hover, &:focus {
         outline: none;
-        outline-color: red;
         background: linear-gradient(175deg, lighten($secondary-color, 2), lighten($primary-color, 2));
         box-shadow: 0 1px 7px darken($box-shadow-btn-color, 10), ;
 
@@ -25,97 +24,51 @@
 }
 
 .favorite-btn {
-    font-size: 2rem;
-    color: $main-color-logo;
-    // z-index: 9999;
     width: min-content;
     height: min-content;
     justify-self: center;  
     align-self: center;
-
     position: relative;
-    // border: solid green;
-    // width: 200px;
-    // height: 200px;
-    
-    
     
     .heart-logo-favorite {
-        // color: blue;
         font-size: 2rem;
-        // opacity: 1;
-        overflow: hidden;
-        
+        color: $main-color-logo;
+
         &::after {
             position: absolute;
             content: "\f004";
             font-weight: bold;
-            color: #9b0101;
+            color: #cc3a3a;
             left: 0;
             top: 0;
-            // z-index: 1;
             opacity: 0;
-        }
-    }
-    
-    &:hover .heart-logo-favorite::after {
-        opacity: 1;
-        animation: heart-logo 2s both ease-out alternate 2;
+            transition: all 1s cubic-bezier(.46,.07,.85,1.47);
         }
 
-    &:hover .heart-logo-favorite {
-        animation: heart-logo 2s both ease-out alternate 2;
+        &:hover, &:active {
+            // color: #9b0101;
+            // transform-origin: bottom;
+            // transition: all 1s cubic-bezier(.46,.07,.85,1.47);
 
-
+            &::after {
+                opacity: 1;
+                transform-origin: bottom;
+                animation: favorite-btn-filling 1s cubic-bezier(.46,.07,.85,1.47);
+            }
+        }
     }
-
 }
  
-// animation : heart-logo 2s linear alternate both; 
-
-
-
-@keyframes heart-logo {
+@keyframes favorite-btn-filling {
     0% {
-        opacity: 1;
         transform: scale(0, 0);
     }
 
-
-    50% {
-        // opacity: 0.5;
-        // animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
-    }
-
-    80% {
-        // opacity: 1;
-        transform: scale(1.1, 1.1);
+    90% {
+        transform: scale(1.1);
     }
 
     100% {
-        opacity: 1;
-        transform: scale(1, 1);
+        transform: scale(1);
     }
 }
-
-
-
-
-// @keyframes heart-logo-full {
-//     0% {
-//         transform: scale(1, 1);
-//     }
-    
-//     25% {
-//         // transform: scaleY(0.2);
-//     }
-
-//     50% {
-
-//     }
-
-//     100% {
-//         transform: scale(1, 1);
-
-//     }
-// }
