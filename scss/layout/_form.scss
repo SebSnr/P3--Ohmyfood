@@ -1,27 +1,37 @@
 /****************** menu formulaire ******************/
 
 .page-menu-form {
-    height: 21rem;  // a affiner
+    // height: 21rem;  // a affiner
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    gap: 40px;  // a test
-
     // border: solid salmon;
     
     &__submit-btn {
-        margin-top: $margin-bottom-title;
-        align-self: center;  //car dans flexbox
+        margin-top: calc(#{$margin-bottom-title} *2);
+        align-self: center;
     }
 }
 
 .course-category {
     min-width: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 20px;  // a test
     
     &__title {
         text-transform: uppercase;
         font-weight: normal;
         font-size: 1.2rem;
-        margin-top: $margin-bottom-title;          
+        margin-top: calc(#{$margin-bottom-title} *1.5);
+        margin-bottom: calc(#{$margin-bottom-title} /2);
+
+        &:after {
+            content:"";
+            display: block;
+            margin-top: 2px;
+            width: 50px;
+            border-bottom: 3px solid $tertiary-color;
+        }        
     }
 }
