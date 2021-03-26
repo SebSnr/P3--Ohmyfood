@@ -7,6 +7,28 @@
     height: 75px;
     overflow: hidden;
 
+    
+    animation: course-apparition 0.5s both ;
+    @for $i from 1 through 3  {
+        &--#{$i} {
+            animation-delay: $animat-durat-course-card-appear * $i;
+        }
+    }
+
+    @for $i from 4 through 6  {
+        &--#{$i} {
+            animation-delay: $animat-durat-course-card-appear * $i + $animat-durat-course-card-appear;
+        }
+    }
+
+    @for $i from 7 through 9  {
+        &--#{$i} {
+            animation-delay: $animat-durat-course-card-appear * $i + 2 * $animat-durat-course-card-appear ;
+        }
+    }
+
+    
+
     .course-card-flex {
         position: relative;
         width: calc(100% + #{$check-icon-box-width} );
@@ -77,13 +99,6 @@
             transition: margin-right 1s ease-in-out ;
 
             // border: gold solid;
-            
         }
-        
-        
-
     }
-    
-        
 }
-
