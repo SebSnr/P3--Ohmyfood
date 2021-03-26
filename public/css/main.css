@@ -567,25 +567,9 @@ a:active, button:active {
   width: 7vh;
   border-radius: 100%;
   box-shadow: 2px 2px 7px grey;
-  border: 4px solid #9356DC;
+  border: 14px solid #9356DC;
+  border-top-color: #FF79DA;
   animation: load-spinner 0.4s infinite cubic-bezier(0.23, 0.57, 0.79, 0.19) both;
-}
-
-.loader-page::after {
-  content: "";
-  display: block;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  margin: auto;
-  height: 7vh;
-  width: 7vh;
-  border-radius: 100%;
-  border-top: 7px solid #99E2D0;
-  border-right: 4px solid #99E2D0;
-  animation: load-spinner 0.2s infinite cubic-bezier(0.23, 0.57, 0.79, 0.19) both;
 }
 
 @keyframes loader-page {
