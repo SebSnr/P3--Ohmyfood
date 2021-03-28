@@ -5,51 +5,63 @@
 }
 
 .footer-container {    
-    @include max-width-mobile-container;
+    @include mobile-container-max-width;
     display: flex;
     flex-direction: column;
     justify-content: center;
     justify-self: center;
-    // height: 15rem;
-    // border: solid gold;
-
     
-    &__title, i, a {
+    * {
         color: white;
     }
-
+    
     &__title, 
     &__navigation {
-        @include screen-padding;
+        padding-right: 2*$screen-padding;
+        padding-left: 2*$screen-padding;
     }
 
     &__title {
         font-family: 'Shrikhand', cursive;
-        font-size: 1.2rem;
+        font-size: 1.3rem;
         font-weight: 200;
         margin-top: $title-font-size;
         margin-bottom: $margin-bottom-title;
-
-        // border: solid gold;
     }
 
     &__navigation {
-        // border: solid red;
         margin-bottom: $title-font-size;
 
         &__list {
             line-height: 2.2rem;
+
             .fas {
-                width: 2rem
-                // font-size: 2em;
+                width: 2.5rem;
             }
-            
-            .fa-hands-helping {
-                font-size: 0.7rem;
+
+            .fa-utensils {
+                font-size: 1.2rem;
             }
         }
     }
 
+    @media screen and (min-width: $desktop-max-width) {
+        @include deskop-container-max-witdh;
+        padding-top: 1.5rem;
+        padding-bottom: 3rem;
+        
+        &__title {
+            font-size: 1.5rem;
+        }
 
+        &__navigation {
+            display: flex;
+            justify-content: space-evenly;
+            margin-top: 1rem;
+            *, .fa-utensils {
+                font-size: 1.1em;
+            }
+        }
+    }
 
 }

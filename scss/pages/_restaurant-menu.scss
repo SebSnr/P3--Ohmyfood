@@ -21,7 +21,7 @@
     padding-top: $margin-bottom-title;
     
     &__content  {
-        @include max-width-mobile-container;
+        @include mobile-container-max-width;
         @include screen-padding;
         // border: solid salmon;
     }

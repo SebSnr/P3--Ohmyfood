@@ -2,10 +2,16 @@
 
 // padding //
 
-@mixin max-width-mobile-container {
-    max-width: 500px;
+@mixin mobile-container-max-width {
+    max-width: $mobile-container-max-width;
     margin: 0 auto;
 }
+
+@mixin deskop-container-max-witdh {
+    max-width: $desktop-max-width;
+}
+
+
 @mixin screen-margin {
     margin-left: $screen-padding;
     margin-right: $screen-padding;

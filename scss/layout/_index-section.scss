@@ -2,11 +2,16 @@
 
 .index-section {
     background-color: $light-color-background;
-    padding: 2.5rem $screen-padding; // créer une mixin ? répétion explication section
+    
+    // border: solid saddlebrown
 }
 
 .index-container {
-    @include max-width-mobile-container;
+    @include mobile-container-max-width;
+    padding: 2.5rem $screen-padding; // créer une mixin ? répétion explication section
+    
+    // border: gold solid;
+    
     
     &__title {
         margin-bottom: $margin-bottom-title;
@@ -14,12 +19,25 @@
 
     &__carousel {
         display: grid;
-        grid-template-rows: repeat(4, 300px);
+        grid-template-rows: repeat(4, $home-carousel-height);
         grid-gap: 20px;
         margin-top: $screen-padding;
         margin-bottom: $screen-padding;
-
+    }
+    
+    @media screen and (min-width: $desktop-max-width) {
+        @include deskop-container-max-witdh;
         // border: red solid;
+        
+        &__title {
+            margin-bottom: 1.5* $margin-bottom-title;
+        }
+
+        &__carousel {
+        grid-template: repeat(2, $home-carousel-height) / repeat(2, 1fr);
+        grid-gap: 40px;
+        justify-content: center
+        }
     }
 }
 
@@ -28,7 +46,6 @@
     display: block;
     position: relative;
     
-    // border: gold solid;
 
     a {
         position: absolute;
