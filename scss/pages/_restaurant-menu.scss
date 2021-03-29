@@ -23,7 +23,10 @@
     &__content  {
         @include mobile-container-max-width;
         @include screen-padding;
-        // border: solid salmon;
+        
+        @media screen and (min-width: $desktop-max-width) {
+            @include deskop-container-max-witdh;
+        }
     }
 }
 

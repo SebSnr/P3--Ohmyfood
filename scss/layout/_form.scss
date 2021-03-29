@@ -4,11 +4,23 @@
     // height: 21rem;  // a affiner
     display: flex;
     flex-direction: column;
-    // border: solid salmon;
     
     &__submit-btn {
         margin-top: calc(#{$margin-bottom-title} *2);
         align-self: center;
+    }
+    
+    @media screen and (min-width: $desktop-max-width) {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 30px;
+        justify-content: center;
+
+        &__submit-btn {
+            margin-top: $margin-bottom-title;
+            margin-bottom: .5 * $margin-bottom-title;
+        }
+        
     }
 }
 
@@ -18,6 +30,7 @@
     flex-direction: column;
     justify-content: space-around;
     gap: 20px;  // a test
+    flex: 30%;
     
     &__title {
         text-transform: uppercase;
@@ -34,6 +47,15 @@
             border-bottom: 3px solid $tertiary-color;
         }        
     }
+
+    @media screen and (min-width: $desktop-max-width) {
+        gap: 30px;
+
+        &__title {
+            margin-bottom: $margin-bottom-title;
+        }
+        
+    }
 }
 
 @keyframes course-apparition {
@@ -41,7 +63,6 @@
         opacity: 0;
     }
     to {
-        // transform: translateY(0);
         opacity: 1;
     }
 }
