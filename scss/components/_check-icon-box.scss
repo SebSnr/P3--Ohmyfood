@@ -10,7 +10,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    transition: transform 1s ease-in-out;
+    transition: transform $animat-durat-check-box ease-in-out;
 
     .fa-check {
         justify-content: center;
@@ -20,6 +20,6 @@
         font-size: 1.1rem;
         border-radius: 50%;
         padding: 0.4rem ;
-        transition: transform 1.3s ease-in-out;
+        transition: transform calc(#{$animat-durat-check-box} + .1s) ease-in-out;
     }
 }   

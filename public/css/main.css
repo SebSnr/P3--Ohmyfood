@@ -428,6 +428,7 @@ a:active, button:active {
 
 @media screen and (min-width: 1200px) {
   .course-category {
+    justify-content: flex-start;
     gap: 30px;
   }
   .course-category__title {
@@ -491,6 +492,10 @@ a:active, button:active {
   animation-delay: 1.1s;
 }
 
+.course-card--10 {
+  animation-delay: 1.2s;
+}
+
 .course-card .course-card-flex {
   position: relative;
   width: calc(100% + 70px);
@@ -551,7 +556,7 @@ a:active, button:active {
   text-align: center;
   font-weight: 900;
   flex-basis: calc(50px + 15px);
-  transition: margin-right 1s ease-in-out;
+  transition: margin-right 0.5s ease-in-out;
 }
 
 /****************** buttons ******************/
@@ -629,7 +634,7 @@ a:active, button:active {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  transition: transform 1s ease-in-out;
+  transition: transform 0.5s ease-in-out;
 }
 
 .check-icon-box .fa-check {
@@ -640,7 +645,7 @@ a:active, button:active {
   font-size: 1.1rem;
   border-radius: 50%;
   padding: 0.4rem;
-  transition: transform 1.3s ease-in-out;
+  transition: transform calc(0.5s + .1s) ease-in-out;
 }
 
 /****************** page menu ******************/

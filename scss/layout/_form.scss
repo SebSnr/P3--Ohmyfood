@@ -49,6 +49,7 @@
     }
 
     @media screen and (min-width: $desktop-max-width) {
+        justify-content: flex-start;
         gap: 30px;
 
         &__title {
