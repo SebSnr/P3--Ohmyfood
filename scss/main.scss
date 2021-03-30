@@ -1,11 +1,9 @@
 // abstract
 @import "abstracts/variables";
 @import "abstracts/mixins";
-@import "abstracts/functions";
 
 // base
 @import "base/base";
-@import "base/animation";
 
 // layout
 @import "layout/header";
@@ -13,13 +11,11 @@
 @import "layout/search-section";
 @import "layout/explications-section"; 
 @import "layout/index-section";
-@import "layout/form";
+@import "layout/page-menu-form";
 @import "layout/course-card";
- 
  
 //components
 @import "components/button";
-@import "components/card";
 @import "components/check-icon-box";
 
 // pages

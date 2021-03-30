@@ -15,9 +15,6 @@
     &:hover, &:focus {
         background: linear-gradient(175deg, lighten($secondary-color, 2), lighten($primary-color, 2));
         box-shadow: 0 1px 7px darken($box-shadow-btn-color, 10), ;
-
-        // filter: brightness(101%);
-        // border: blue solid;
         }
 }
 
@@ -27,12 +24,6 @@
     justify-self: center;  
     align-self: center;
     position: relative;
-
-    //  &:focus .heart-logo-favorite::after {
-    //         // border: purple solid; //a travailler pour click focus couleur rouge full
-    //         outline: 0;
-    //         opacity: 1;
-    //     }
     
     .heart-logo-favorite {
         font-size: 2rem;
@@ -60,6 +51,7 @@
     }
 }
  
+// favorite button animation //
 @keyframes favorite-btn-filling {
     0% {
         transform: scale(0, 0);

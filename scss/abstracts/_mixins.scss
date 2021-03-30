@@ -1,16 +1,15 @@
 /****************** mixins ******************/
 
-// padding //
+// paddings //
 
 @mixin mobile-container-max-width {
-    max-width: $mobile-container-max-width;
+    max-width: $mobile-max-width;
     margin: 0 auto;
 }
 
-@mixin deskop-container-max-witdh {
+@mixin desktop-container-max-width {
     max-width: $desktop-max-width;
 }
-
 
 @mixin screen-margin {
     margin-left: $screen-padding;
@@ -22,19 +21,35 @@
     padding-right: $screen-padding;
 }
 
-// border //
+// borders //
 
 @mixin sm-border-top-radius {
     border-top-left-radius: $main-border-radius-card;
     border-top-right-radius: $main-border-radius-card;
 }
 
-@mixin border-radius-shadow {
+@mixin shadow-border-radius-card {
     box-shadow: 0 2px 6px  #dfdfdf;
     border-radius: $main-border-radius-card;
 }
 
 // media queries //
+@mixin screen-and-desktop {
+    @media screen and (min-width: $desktop-max-width) {
+        @content;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
 @mixin mobile {
     @media screen and (max-width: $screen-phone-max) {
         @content;

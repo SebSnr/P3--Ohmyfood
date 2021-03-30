@@ -2,16 +2,11 @@
 
 .index-section {
     background-color: $light-color-background;
-    
-    // border: solid saddlebrown
 }
 
 .index-container {
     @include mobile-container-max-width;
-    padding: 2.5rem $screen-padding; // créer une mixin ? répétion explication section
-    
-    // border: gold solid;
-    
+    padding: 2.5rem $screen-padding;
     
     &__title {
         margin-bottom: $margin-bottom-title;
@@ -25,27 +20,25 @@
         margin-bottom: $screen-padding;
     }
     
-    @media screen and (min-width: $desktop-max-width) {
-        @include deskop-container-max-witdh;
-        // border: red solid;
+    @include screen-and-desktop {
+        @include desktop-container-max-width;
         
         &__title {
             margin-bottom: 1.5* $margin-bottom-title;
         }
 
         &__carousel {
-        grid-template: repeat(2, $home-carousel-height) / repeat(2, 1fr);
-        grid-gap: 40px;
-        justify-content: center
+            grid-template: repeat(2, $home-carousel-height) / repeat(2, 1fr);
+            grid-gap: 40px;
+            justify-content: center
         }
     }
 }
 
 .rs-card {
-    @include border-radius-shadow;
+    @include shadow-border-radius-card;
     display: block;
     position: relative;
-    
 
     a {
         position: absolute;
@@ -54,10 +47,7 @@
         left: 0;
         height: 100%;
         width: 100%;
-        
-        // border: solid gold;
     }
-
 
     &__photo {
         width: 100%;
@@ -74,13 +64,10 @@
         grid-template-columns: 90% 10%;
         padding-left: $text-content-margin;
         padding-right: $text-content-margin;
-
-        // border: blue solid;
     
         &__items {
             margin: auto 0;
             align-self: center;
-            // border: purple solid;
 
             h3 {
                 padding-bottom: $padding-bottom-item-title;

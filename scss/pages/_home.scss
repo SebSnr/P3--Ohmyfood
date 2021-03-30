@@ -1,15 +1,14 @@
 /****************** home page ******************/
 
 .loader-page {
-        content: "";
-        // display: block;
-        display: none;
-        position: fixed;
-        height: 100vh;
-        width: 100vw;
-        background-color: white;
-        z-index: 99999999999;
-        animation: loader-page 1.5s both cubic-bezier(0,.25,0,.96);   
+    content: "";
+    display: block;
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    background-color: white;
+    z-index: 99999999999;
+    animation: loader-page 1.5s both cubic-bezier(0,.25,0,.96);   
 
     &::before{
         content: "";
@@ -30,6 +29,7 @@
     }
 }
 
+// loader page animation //
 @keyframes loader-page {
     0% {
         transform: translateX(0);

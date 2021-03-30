@@ -1,14 +1,14 @@
 /****************** menu-form card ******************/
 
 .course-card {
-    @include border-radius-shadow;
+    @include shadow-border-radius-card;
     background-color: white;
     position: relative;
     height: 75px;
     overflow: hidden;
     animation: course-apparition 0.5s both ;
 
-    @for $i from 1 through 10  {
+    @for $i from 1 through 10 {
         &--#{$i} {
             animation-delay: $animat-durat-course-card-appear * $i;
         }
@@ -20,16 +20,12 @@
     width: calc(100% + #{$check-icon-box-width} );
     display: flex;
 
-    // border: solid saddlebrown; 
-
     &__input {
         display: none;  
 
         &:checked ~ .course-card-flex__dish-price,
         &:hover ~ .course-card-flex__dish-price {
             margin-right: $check-icon-box-width;
-            
-            // border: blue solid;
         }
         
         &:checked ~ .check-icon-box,
@@ -50,16 +46,12 @@
         top: 0;
         left:0;   
         z-index: 99999;    
-        
-        // border: solid red;
     }
     
     &__dish {
         margin: $screen-padding 0 $screen-padding $screen-padding;
         overflow: hidden;
         flex: 1;
-        
-        // border: solid purple; 
         
         &__title {
             padding-bottom: $padding-bottom-item-title;
@@ -83,12 +75,10 @@
         font-weight: $heavy-bold;
         flex-basis: calc(50px + #{$screen-padding});
         transition: margin-right $animat-durat-check-box ease-in-out ;
-
-        // border: gold solid;
     }
 }
 
-
+// menu card apparition animation //
 @keyframes course-apparition {
     from {
         opacity: 0;

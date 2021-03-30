@@ -10,6 +10,7 @@
 }
 
 body {
+  min-width: 260px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -53,7 +54,6 @@ a:active, button:active {
   background-color: rgba(218, 216, 216, 0.13);
 }
 
-/****************** animation ******************/
 /****************** header style ******************/
 .header {
   padding-left: 15px;
@@ -73,18 +73,18 @@ a:active, button:active {
   display: flex;
 }
 
+.header__home-link .fa-arrow-left {
+  margin: auto;
+  font-size: 1.1rem;
+  font-weight: 900;
+}
+
 @media screen and (max-width: 350px) {
   .header__home-link {
     grid-column: 1 / 2;
     justify-self: start;
     align-self: center;
   }
-}
-
-.header__home-link .fa-arrow-left {
-  margin: auto;
-  font-size: 1.1rem;
-  font-weight: 900;
 }
 
 /****************** footer style ******************/
@@ -156,11 +156,11 @@ a:active, button:active {
 /****************** search section ******************/
 .location-banner {
   background-color: #ececec;
+  box-shadow: inset 0px 8px 8px -10px #808080;
   height: 3rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: inset 0px 8px 8px -10px #808080;
 }
 
 .location-banner__city {
@@ -176,10 +176,10 @@ a:active, button:active {
 }
 
 .search-box__title, .search-box__title ~ * {
-  margin-left: auto;
-  margin-right: auto;
   padding-left: 15px;
   padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 @media screen and (max-width: 520px) {
@@ -234,26 +234,26 @@ a:active, button:active {
   }
 }
 
-.explications-items {
+.explications-card {
+  box-shadow: 0 2px 6px  #dfdfdf;
+  border-radius: 20px;
   background-color: #f6f6f6;
   position: relative;
   height: 5rem;
-  box-shadow: 0 2px 6px  #dfdfdf;
-  border-radius: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.explications-items:last-child {
+.explications-card:last-child {
   background-color: #f7f2fc;
 }
 
-.explications-items__numbers, .explications-items__logo, .explications-items__text {
+.explications-card__numbers, .explications-card__logo, .explications-card__text {
   display: inline-block;
 }
 
-.explications-items__numbers {
+.explications-card__numbers {
   position: absolute;
   background-color: #9356DC;
   color: white;
@@ -264,29 +264,29 @@ a:active, button:active {
   transform: translateY(-50%);
 }
 
-.explications-items__logo {
+.explications-card__logo {
   flex: 0 1 20%;
   text-align: center;
   font-size: 1.1rem;
   color: #696969;
 }
 
-.explications-items__text {
+.explications-card__text {
   flex: 0 1 70%;
   font-size: 1.1rem;
   font-weight: 900;
 }
 
-.explications-items .fa-mobile-alt {
+.explications-card .fa-mobile-alt {
   font-size: 1.4rem;
 }
 
-.explications-items .fa-store {
+.explications-card .fa-store {
   color: #9356DC;
 }
 
 @media screen and (min-width: 1200px) {
-  .explications-items {
+  .explications-card {
     flex: 1;
   }
 }
@@ -436,15 +436,6 @@ a:active, button:active {
   }
 }
 
-@keyframes course-apparition {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
 /****************** menu-form card ******************/
 .course-card {
   box-shadow: 0 2px 6px  #dfdfdf;
@@ -469,59 +460,59 @@ a:active, button:active {
 }
 
 .course-card--4 {
-  animation-delay: 0.5s;
+  animation-delay: 0.4s;
 }
 
 .course-card--5 {
-  animation-delay: 0.6s;
+  animation-delay: 0.5s;
 }
 
 .course-card--6 {
-  animation-delay: 0.7s;
+  animation-delay: 0.6s;
 }
 
 .course-card--7 {
-  animation-delay: 0.9s;
+  animation-delay: 0.7s;
 }
 
 .course-card--8 {
-  animation-delay: 1s;
+  animation-delay: 0.8s;
 }
 
 .course-card--9 {
-  animation-delay: 1.1s;
+  animation-delay: 0.9s;
 }
 
 .course-card--10 {
-  animation-delay: 1.2s;
+  animation-delay: 1s;
 }
 
-.course-card .course-card-flex {
+.course-card-flex {
   position: relative;
   width: calc(100% + 70px);
   display: flex;
 }
 
-.course-card .course-card-flex__input {
+.course-card-flex__input {
   display: none;
 }
 
-.course-card .course-card-flex__input:checked ~ .course-card-flex__dish-price,
-.course-card .course-card-flex__input:hover ~ .course-card-flex__dish-price {
+.course-card-flex__input:checked ~ .course-card-flex__dish-price,
+.course-card-flex__input:hover ~ .course-card-flex__dish-price {
   margin-right: 70px;
 }
 
-.course-card .course-card-flex__input:checked ~ .check-icon-box,
-.course-card .course-card-flex__input:hover ~ .check-icon-box {
+.course-card-flex__input:checked ~ .check-icon-box,
+.course-card-flex__input:hover ~ .check-icon-box {
   transform: translateX(-70px);
 }
 
-.course-card .course-card-flex__input:checked ~ .check-icon-box .fa-check,
-.course-card .course-card-flex__input:hover ~ .check-icon-box .fa-check {
+.course-card-flex__input:checked ~ .check-icon-box .fa-check,
+.course-card-flex__input:hover ~ .check-icon-box .fa-check {
   transform: rotate(-360deg);
 }
 
-.course-card .course-card-flex__label {
+.course-card-flex__label {
   cursor: pointer;
   position: absolute;
   width: 100%;
@@ -531,25 +522,25 @@ a:active, button:active {
   z-index: 99999;
 }
 
-.course-card .course-card-flex__dish {
+.course-card-flex__dish {
   margin: 15px 0 15px 15px;
   overflow: hidden;
   flex: 1;
 }
 
-.course-card .course-card-flex__dish__title {
+.course-card-flex__dish__title {
   padding-bottom: 0.3rem;
   font-size: 1.1rem;
   font-weight: 900;
 }
 
-.course-card .course-card-flex__dish__title, .course-card .course-card-flex__dish__descript {
+.course-card-flex__dish__title, .course-card-flex__dish__descript {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
-.course-card .course-card-flex__dish-price {
+.course-card-flex__dish-price {
   margin-top: 15px;
   margin-bottom: 15px;
   align-self: flex-end;
@@ -557,6 +548,15 @@ a:active, button:active {
   font-weight: 900;
   flex-basis: calc(50px + 15px);
   transition: margin-right 0.5s ease-in-out;
+}
+
+@keyframes course-apparition {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 /****************** buttons ******************/
@@ -694,7 +694,7 @@ a:active, button:active {
 /****************** home page ******************/
 .loader-page {
   content: "";
-  display: none;
+  display: block;
   position: fixed;
   height: 100vh;
   width: 100vw;

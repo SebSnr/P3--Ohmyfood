@@ -45,8 +45,8 @@
         }
     }
 
-    @media screen and (min-width: $desktop-max-width) {
-        @include deskop-container-max-witdh;
+    @include screen-and-desktop {
+        @include desktop-container-max-width;
         padding-top: 1.5rem;
         padding-bottom: 3rem;
         
@@ -63,5 +63,4 @@
             }
         }
     }
-
 }

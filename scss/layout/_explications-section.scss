@@ -5,8 +5,6 @@
     @include screen-padding;
     padding-top: 2.5rem;
     padding-bottom: 2.5rem;
-    // height: 30rem;
-    // border: solid green;
 
     &__title {
         margin-bottom: $margin-bottom-title;
@@ -18,12 +16,11 @@
         justify-content: space-between;
         align-content: center;
         gap: 1.7rem;
-        // height: 20rem;
         padding-left: $screen-padding;
     }
 
-    @media screen and (min-width: $desktop-max-width) {
-        @include deskop-container-max-witdh;
+    @include screen-and-desktop {
+        @include desktop-container-max-width;
         padding-top: 4rem;
         padding-bottom: 4.5rem;
 
@@ -33,21 +30,16 @@
             align-content: stretch;
         }
     }
-
-
-
 }
 
-.explications-items {
+.explications-card {
+    @include shadow-border-radius-card;
     background-color: $light-color-background;
     position: relative;
-    // width: 100%;
     height: 5rem;
-    @include border-radius-shadow;
     display: flex;
     justify-content: center;
     align-items: center;
-    // border: solid gold;
     
     &:last-child {
         background-color: lighten($primary-color, 37);
@@ -66,7 +58,6 @@
         left: -1rem;
         top: 50%;
         transform: translateY(-50%);
-        // border: red solid;
     }
     
     &__logo {
@@ -74,30 +65,23 @@
         text-align: center;
         font-size: 1.1rem;
         color: $main-color-logo;
-
     }
     
     &__text {
         flex: 0 1 70%;
         font-size: $subtitle-font-size;
         font-weight: $heavy-bold;
-        // border: solid saddlebrown;
     }
     
     .fa-mobile-alt {
         font-size: 1.4rem;
-        // border: solid;
     }
 
     .fa-store {
         color: $primary-color;
     }
 
-    @media screen and (min-width: $desktop-max-width) {
-        // width: 70%;
-        // border: blue solid;
+    @include screen-and-desktop {
         flex: 1;
-
-       
     }
 }
