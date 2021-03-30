@@ -1,65 +1,67 @@
 /****************** buttons ******************/
 
 .big-btn {
-    display: inline-block;
-    @include screen-margin;
-    padding: 15px 20px;
-    border-radius: 50px;
-    border: none;
-    background: linear-gradient(175deg, $secondary-color, $primary-color);
-    box-shadow: 0 1px 7px $box-shadow-btn-color;
-    font-size: $subtitle-font-size;
-    font-weight: 500;
-    color: white;
-    
-    &:hover, &:focus {
-        background: linear-gradient(175deg, lighten($secondary-color, 2), lighten($primary-color, 2));
-        box-shadow: 0 1px 7px darken($box-shadow-btn-color, 10), ;
-        }
+	display: inline-block;
+	@include screen-margin;
+	padding: 15px 20px;
+	border-radius: 50px;
+	border: none;
+	background: linear-gradient(175deg, $secondary-color, $primary-color);
+	box-shadow: 0 1px 7px $box-shadow-btn-color;
+	font-size: $subtitle-font-size;
+	font-weight: 500;
+	color: white;
+
+	&:hover,
+	&:focus {
+		background: linear-gradient(175deg, lighten($secondary-color, 2), lighten($primary-color, 2));
+		box-shadow: 0 1px 7px darken($box-shadow-btn-color, 10);
+	}
 }
 
 .favorite-btn {
-    width: min-content;
-    height: min-content;
-    justify-self: center;  
-    align-self: center;
-    position: relative;
-    
-    .heart-logo-favorite {
-        font-size: 2rem;
-        color: $main-color-logo;
+	width: min-content;
+	height: min-content;
+	justify-self: center;
+	align-self: center;
+	position: relative;
 
-        &:hover, &::after {
-            color: #cc3a3a;
-            transition: all 0.4s cubic-bezier(.46,.07,.85,1.47);
-            transform-origin: bottom;
-        }
+	.heart-logo-favorite {
+		font-size: 2rem;
+		color: $main-color-logo;
 
-        &::after {
-            position: absolute;
-            content: "\f004";
-            font-weight: bold;
-            left: 0;
-            top: 0;
-            opacity: 0;
-        }
+		&:hover,
+		&::after {
+			color: #cc3a3a;
+			transition: all 0.4s cubic-bezier(0.46, 0.07, 0.85, 1.47);
+			transform-origin: bottom;
+		}
 
-        &:hover::after {
-            opacity: 1;
-            animation: favorite-btn-filling 0.4s cubic-bezier(.46,.07,.85,1.47);
-        }       
-    }
+		&::after {
+			position: absolute;
+			content: "\f004";
+			font-weight: bold;
+			left: 0;
+			top: 0;
+			opacity: 0;
+		}
+
+		&:hover::after {
+			opacity: 1;
+			animation: favorite-btn-filling 0.4s cubic-bezier(0.46, 0.07, 0.85, 1.47);
+		}
+	}
 }
- 
+
 // favorite button animation //
 @keyframes favorite-btn-filling {
-    0% {
-        transform: scale(0, 0);
-    }
-    90% {
-        transform: scale(1.1);
-    }
-    100% {
-        transform: scale(1);
-    }
+	0% {
+		transform: scale(0, 0);
+	}
+	90% {
+		transform: scale(1.1);
+	}
+	100% {
+		transform: scale(1);
+	}
 }

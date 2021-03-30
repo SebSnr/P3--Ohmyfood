@@ -1,57 +1,30 @@
 /****************** header style ******************/
 
 .header {
-    @include screen-padding;
-    height: 3.5rem;
-    display: grid;
-    grid-template-columns: repeat(6,1fr);
-    
-    &__img {
-        grid-column: 3 / 5;
-        justify-self: center;
-        align-self: center;
-    }
+	@include screen-padding;
+	height: 3.5rem;
+	display: grid;
+	grid-template-columns: repeat(6, 1fr);
 
-    &__home-link {
-        display: flex;
-        
-        .fa-arrow-left {
-            margin: auto;
-            font-size: 1.1rem;
-            font-weight: $heavy-bold;
-        }
-     
-        @media screen and (max-width:350px) {
-            grid-column: 1 / 2;
-            justify-self: start;
-            align-self: center;            
-        }
-    }
+	&__img {
+		grid-column: 3 / 5;
+		justify-self: center;
+		align-self: center;
+	}
+
+	&__home-link {
+		display: flex;
+
+		.fa-arrow-left {
+			margin: auto;
+			font-size: 1.1rem;
+			font-weight: $heavy-bold;
+		}
+
+		@media screen and (max-width: 350px) {
+			grid-column: 1 / 2;
+			justify-self: start;
+			align-self: center;
+		}
+	}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

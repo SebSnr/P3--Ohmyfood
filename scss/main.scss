@@ -9,19 +9,15 @@
 @import "layout/header";
 @import "layout/footer";
 @import "layout/search-section";
-@import "layout/explications-section"; 
+@import "layout/explications-section";
 @import "layout/index-section";
 @import "layout/page-menu-form";
 @import "layout/course-card";
- 
+
 //components
 @import "components/button";
 @import "components/check-icon-box";
 
 // pages
-@import "pages/restaurant-menu";
-@import "pages/home";
-
-
-
-
+@import "pages/restaurant-menu-page";
+@import "pages/home-page"; 

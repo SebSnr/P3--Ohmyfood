@@ -1,89 +1,89 @@
 /****************** menu-form card ******************/
 
 .course-card {
-    @include shadow-border-radius-card;
-    background-color: white;
-    position: relative;
-    height: 75px;
-    overflow: hidden;
-    animation: course-apparition 0.5s both ;
+	@include shadow-border-radius-card;
+	background-color: white;
+	position: relative;
+	height: 75px;
+	overflow: hidden;
+	animation: course-apparition 0.5s both;
 
-    @for $i from 1 through 10 {
-        &--#{$i} {
-            animation-delay: $animat-durat-course-card-appear * $i;
-        }
-    }
+	@for $i from 1 through 10 {
+		&--#{$i} {
+			animation-delay: $animat-durat-course-card-appear * $i;
+		}
+	}
 }
 
 .course-card-flex {
-    position: relative;
-    width: calc(100% + #{$check-icon-box-width} );
-    display: flex;
+	position: relative;
+	width: calc(100% + #{$check-icon-box-width});
+	display: flex;
 
-    &__input {
-        display: none;  
+	&__input {
+		display: none;
 
-        &:checked ~ .course-card-flex__dish-price,
-        &:hover ~ .course-card-flex__dish-price {
-            margin-right: $check-icon-box-width;
-        }
-        
-        &:checked ~ .check-icon-box,
-        &:hover ~ .check-icon-box {
-            transform: translateX( - $check-icon-box-width);
-            
-            .fa-check {
-                transform: rotate(-360deg);
-            }
-        }
-    }
-    
-    &__label {
-        cursor: pointer;
-        position: absolute;
-        width: 100%;
-        height:100%;
-        top: 0;
-        left:0;   
-        z-index: 99999;    
-    }
-    
-    &__dish {
-        margin: $screen-padding 0 $screen-padding $screen-padding;
-        overflow: hidden;
-        flex: 1;
-        
-        &__title {
-            padding-bottom: $padding-bottom-item-title;
-            font-size: $subtitle-font-size;
-            font-weight: $heavy-bold;
-        }
-        
-        &__title, 
-        &__descript {
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-        }
-    }
-    
-    &__dish-price {
-        margin-top: $screen-padding;
-        margin-bottom: $screen-padding;
-        align-self: flex-end;
-        text-align: center;
-        font-weight: $heavy-bold;
-        flex-basis: calc(50px + #{$screen-padding});
-        transition: margin-right $animat-durat-check-box ease-in-out ;
-    }
+		&:checked ~ .course-card-flex__dish-price,
+		&:hover ~ .course-card-flex__dish-price {
+			margin-right: $check-icon-box-width;
+		}
+
+		&:checked ~ .check-icon-box,
+		&:hover ~ .check-icon-box {
+			transform: translateX(-$check-icon-box-width);
+
+			.fa-check {
+				transform: rotate(-360deg);
+			}
+		}
+	}
+
+	&__label {
+		cursor: pointer;
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		z-index: 99999;
+	}
+
+	&__dish {
+		margin: $screen-padding 0 $screen-padding $screen-padding;
+		overflow: hidden;
+		flex: 1;
+
+		&__title {
+			padding-bottom: $padding-bottom-item-title;
+			font-size: $subtitle-font-size;
+			font-weight: $heavy-bold;
+		}
+
+		&__title,
+		&__descript {
+			white-space: nowrap;
+			overflow: hidden;
+			text-overflow: ellipsis;
+		}
+	}
+
+	&__dish-price {
+		margin-top: $screen-padding;
+		margin-bottom: $screen-padding;
+		align-self: flex-end;
+		text-align: center;
+		font-weight: $heavy-bold;
+		flex-basis: calc(50px + #{$screen-padding});
+		transition: margin-right $animat-durat-check-box ease-in-out;
+	}
 }
 
 // menu card apparition animation //
 @keyframes course-apparition {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
 }

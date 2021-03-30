@@ -3,70 +3,39 @@
 // paddings //
 
 @mixin mobile-container-max-width {
-    max-width: $mobile-max-width;
-    margin: 0 auto;
+	max-width: $mobile-max-width;
+	margin: 0 auto;
 }
 
 @mixin desktop-container-max-width {
-    max-width: $desktop-max-width;
+	max-width: $desktop-max-width;
 }
 
 @mixin screen-margin {
-    margin-left: $screen-padding;
-    margin-right: $screen-padding;
+	margin-left: $screen-padding;
+	margin-right: $screen-padding;
 }
 
 @mixin screen-padding {
-    padding-left: $screen-padding;
-    padding-right: $screen-padding;
+	padding-left: $screen-padding;
+	padding-right: $screen-padding;
 }
 
 // borders //
 
 @mixin sm-border-top-radius {
-    border-top-left-radius: $main-border-radius-card;
-    border-top-right-radius: $main-border-radius-card;
+	border-top-left-radius: $main-border-radius-card;
+	border-top-right-radius: $main-border-radius-card;
 }
 
 @mixin shadow-border-radius-card {
-    box-shadow: 0 2px 6px  #dfdfdf;
-    border-radius: $main-border-radius-card;
+	box-shadow: 0 2px 6px #dfdfdf;
+	border-radius: $main-border-radius-card;
 }
 
 // media queries //
 @mixin screen-and-desktop {
-    @media screen and (min-width: $desktop-max-width) {
-        @content;
-    }
+	@media screen and (min-width: $desktop-max-width) {
+		@content;
+	}
 }
-
-
-
-
-
-
-
-
-
-
-
-@mixin mobile {
-    @media screen and (max-width: $screen-phone-max) {
-        @content;
-    }
-}
-
-@mixin tablet {
-    @media screen and (max-width: $screen-tablette-) {
-        @content;
-    }
-}
-
-@mixin desktop {
-    @media screen and (max-width: $screen-desktop-min) {
-        @content;
-    }
-}
-
-
-

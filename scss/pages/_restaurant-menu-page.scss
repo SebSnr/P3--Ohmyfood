@@ -1,0 +1,41 @@
+/****************** page menu ******************/
+
+.page-menu {
+	background-color: $light-color-background;
+}
+
+.page-menu__banner {
+	&__img {
+		width: 100%;
+		height: 250px;
+		object-fit: cover;
+	}
+}
+
+.page-menu__container {
+	background-color: $light-color-background;
+	border-top-left-radius: 50px;
+	border-top-right-radius: 50px;
+	transform: translateY(-50px);
+	padding-top: $margin-bottom-title;
+
+	&__content {
+		@include mobile-container-max-width;
+		@include screen-padding;
+
+		@include screen-and-desktop {
+			@include desktop-container-max-width;
+		}
+	}
+}
+
+.page-menu-header {
+	display: flex;
+	justify-content: space-between;
+	padding-right: $screen-padding;
+
+	&__title {
+		font-family: "Shrikhand", cursive;
+		font-weight: $light-bold;
+	}
+}

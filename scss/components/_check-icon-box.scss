@@ -1,24 +1,24 @@
 /****************** check-icon-box ******************/
 
 .check-icon-box {
-    background-color: $tertiary-color;
-    border-top-right-radius: $main-border-radius-card;
-    border-bottom-right-radius: $main-border-radius-card;
-    width: $check-icon-box-width;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    transition: transform $animat-durat-check-box ease-in-out;
+	background-color: $tertiary-color;
+	border-top-right-radius: $main-border-radius-card;
+	border-bottom-right-radius: $main-border-radius-card;
+	width: $check-icon-box-width;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	transition: transform $animat-durat-check-box ease-in-out;
 
-    .fa-check {
-        justify-content: center;
-        vertical-align: middle;
-        background-color: white;
-        color: $tertiary-color;
-        font-size: 1.1rem;
-        border-radius: 50%;
-        padding: 0.4rem ;
-        transition: transform calc(#{$animat-durat-check-box} + .1s) ease-in-out;
-    }
-}   
+	.fa-check {
+		justify-content: center;
+		vertical-align: middle;
+		background-color: white;
+		color: $tertiary-color;
+		font-size: 1.1rem;
+		border-radius: 50%;
+		padding: 0.4rem;
+		transition: transform calc(#{$animat-durat-check-box} + 0.1s) ease-in-out;
+	}
+}

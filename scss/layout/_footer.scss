@@ -1,66 +1,67 @@
 /****************** footer style ******************/
 
 .footer {
-    background-color: #2e2d2d;
+	background-color: #2e2d2d;
 }
 
-.footer-container {    
-    @include mobile-container-max-width;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    justify-self: center;
-    
-    * {
-        color: white;
-    }
-    
-    &__title, 
-    &__navigation {
-        padding-right: 2*$screen-padding;
-        padding-left: 2*$screen-padding;
-    }
+.footer-container {
+	@include mobile-container-max-width;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	justify-self: center;
 
-    &__title {
-        font-family: 'Shrikhand', cursive;
-        font-size: 1.3rem;
-        font-weight: 200;
-        margin-top: $title-font-size;
-        margin-bottom: $margin-bottom-title;
-    }
+	* {
+		color: white;
+	}
 
-    &__navigation {
-        margin-bottom: $title-font-size;
+	&__title,
+	&__navigation {
+		padding-right: 2 * $screen-padding;
+		padding-left: 2 * $screen-padding;
+	}
 
-        &__list {
-            line-height: 2.2rem;
+	&__title {
+		font-family: "Shrikhand", cursive;
+		font-size: 1.3rem;
+		font-weight: 200;
+		margin-top: $title-font-size;
+		margin-bottom: $margin-bottom-title;
+	}
 
-            .fas {
-                width: 2.5rem;
-            }
+	&__navigation {
+		margin-bottom: $title-font-size;
 
-            .fa-utensils {
-                font-size: 1.2rem;
-            }
-        }
-    }
+		&__list {
+			line-height: 2.2rem;
 
-    @include screen-and-desktop {
-        @include desktop-container-max-width;
-        padding-top: 1.5rem;
-        padding-bottom: 3rem;
-        
-        &__title {
-            font-size: 1.5rem;
-        }
+			.fas {
+				width: 2.5rem;
+			}
 
-        &__navigation {
-            display: flex;
-            justify-content: space-evenly;
-            margin-top: 1rem;
-            *, .fa-utensils {
-                font-size: 1.1em;
-            }
-        }
-    }
+			.fa-utensils {
+				font-size: 1.2rem;
+			}
+		}
+	}
+
+	@include screen-and-desktop {
+		@include desktop-container-max-width;
+		padding-top: 1.5rem;
+		padding-bottom: 3rem;
+
+		&__title {
+			font-size: 1.5rem;
+		}
+
+		&__navigation {
+			display: flex;
+			justify-content: space-evenly;
+			margin-top: 1rem;
+			*,
+			.fa-utensils {
+				font-size: 1.1em;
+			}
+		}
+	}
 }
