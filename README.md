@@ -1,6 +1,6 @@
 SebastienSanner_3_14032021 Site web Ohmyfood - Projet P3 OpenClassRooms
 
-Version 1.2 ready for run
+Version 1.2 ready to run
 
 https://sebsnr.github.io/SebastienSanner_3_14032021/
 
