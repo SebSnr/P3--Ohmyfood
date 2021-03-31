@@ -1,5 +1,10 @@
-/****************** normalisation ******************/
+/* 
+Author : Sebastien Sanner
+URL : https://sebsnr.github.io/SebastienSanner_3_14032021/index.html
+Description : Projet P3 - site Ohmyfood - cours OpenClassRooms - Web developer formation
+*/
 
+/****************** normalisation ******************/
 * {
   box-sizing: border-box;
   margin: 0;
@@ -18,7 +23,6 @@ fieldset {
 }
 
 /****************** general typographies ******************/
-
 h1, h2, h3, h4, p, a, button {
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
