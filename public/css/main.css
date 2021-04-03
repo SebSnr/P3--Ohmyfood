@@ -1,9 +1,5 @@
-/* 
-Author : Sebastien Sanner
-URL : https://sebsnr.github.io/SebastienSanner_3_14032021/index.html
-Description : Projet P3 - site Ohmyfood - cours OpenClassRooms - Web developer formation
-*/
-
+/****************** variables ******************/
+/****************** mixins ******************/
 /****************** normalisation ******************/
 * {
   box-sizing: border-box;
@@ -251,8 +247,12 @@ a:active, button:active {
   align-items: center;
 }
 
-.explications-card:last-child {
+.explications-card:hover {
   background-color: #f7f2fc;
+}
+
+.explications-card:hover .fas {
+  color: #9356dc;
 }
 
 .explications-card__numbers, .explications-card__logo, .explications-card__text {
@@ -285,10 +285,6 @@ a:active, button:active {
 
 .explications-card .fa-mobile-alt {
   font-size: 1.4rem;
-}
-
-.explications-card .fa-store {
-  color: #9356dc;
 }
 
 @media screen and (min-width: 1200px) {
@@ -525,7 +521,7 @@ a:active, button:active {
   height: 100%;
   top: 0;
   left: 0;
-  z-index: 99999;
+  z-index: 9;
 }
 
 .course-card-flex__dish {
@@ -599,7 +595,7 @@ a:active, button:active {
 }
 
 .favorite-btn .heart-logo-favorite:hover, .favorite-btn .heart-logo-favorite::after {
-  color: #cc3a3a;
+  color: #9356dc;
   transition: all 0.4s cubic-bezier(0.46, 0.07, 0.85, 1.47);
   transform-origin: bottom;
 }
@@ -705,7 +701,7 @@ a:active, button:active {
   height: 100vh;
   width: 100vw;
   background-color: white;
-  z-index: 99999999999;
+  z-index: 9;
   animation: loader-page 1.5s both cubic-bezier(0, 0.25, 0, 0.96);
 }
 
@@ -742,7 +738,7 @@ a:active, button:active {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(99999px);
+    transform: translateX(-200vh);
     opacity: 1;
   }
 }

@@ -7,7 +7,7 @@
 	height: 100vh;
 	width: 100vw;
 	background-color: white;
-	z-index: 99999999999;
+	z-index: 9;
 	animation: loader-page 1.5s both cubic-bezier(0, 0.25, 0, 0.96);
 
 	&::before {
@@ -45,7 +45,7 @@
 		transform: translateX(0);
 	}
 	100% {
-		transform: translateX(99999px);
+		transform: translateX(-200vh);
 		opacity: 1;
 	}
 }
