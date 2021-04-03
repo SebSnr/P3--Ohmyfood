@@ -32,7 +32,7 @@
 
 		&:hover,
 		&::after {
-			color: #cc3a3a;
+			color: $primary-color;
 			transition: all 0.4s cubic-bezier(0.46, 0.07, 0.85, 1.47);
 			transform-origin: bottom;
 		}
