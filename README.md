@@ -6,7 +6,7 @@
 
 🎓 Powerpoint détaillé de la soutenance : [Ohmyfood-soutenance.pptx](https://github.com/SebSnr/P3--Ohmyfood/files/6967259/Ohmyfood-soutenance.pptx)
 
-Site online : https://sebsnr.github.io/P3--Ohmyfood/
+💻 Site online : https://sebsnr.github.io/P3--Ohmyfood/
 
 ![image](https://user-images.githubusercontent.com/78140833/113207255-ae1c1300-9270-11eb-85aa-10627a66f3dd.png)
 
